@@ -1,0 +1,349 @@
+.banner-section {
+  height: 500px;
+  position: relative;
+  .banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    h1 {
+      margin-bottom: 2rem;
+    }
+    @include for-phone {
+      align-items: flex-start;
+    }
+  }
+}
+
+.meals-section {
+  padding: 6rem 0;
+  &_top {
+    margin-bottom: 5rem;
+    .nav-tabs {
+      justify-content: center;
+      border: none;
+      .nav-link {
+        font-weight: 800;
+        color: $pink;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-color: $white;
+        border: 3px solid $pink;
+        padding: 26px 36px;
+        font-size: 16px;
+        line-height: 1;
+        border-radius: 40px;
+        transition: 0.2s;
+        text-transform: uppercase;
+        &:first-child {
+          margin-right: 1rem;
+          @include for-phone {
+            margin-right: 0;
+            margin-bottom: 1rem;
+          }
+        }
+        &.active {
+          background-color: $pink;
+          color: $white;
+        }
+        @include for-desktop-xl-up {
+          font-size: 24px;
+        }
+      }
+      @include for-phone {
+        justify-content: flex-start;
+      }
+    }
+  }
+  &_bottom {
+    .meals-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+      margin-bottom: 5rem;
+      .meal-item {
+        padding: 1rem;
+        .img-wrapper {
+          width: 100%;
+          height: 290px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 2rem;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+          @include for-desktop-xl-up {
+            height: 400px;
+          }
+        }
+        .modal-title {
+          margin-bottom: 1rem;
+        }
+        .meal-desc {
+          margin-bottom: 1rem;
+        }
+        .alergens {
+          display: flex;
+          flex-direction: row;
+          list-style: none;
+          padding: 0;
+          li {
+            margin-right: 1rem;
+          }
+        }
+        .form-wrapper {
+          form {
+            display: flex;
+            align-items: center;
+            .form-group {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin-right: 3rem;
+              span {
+                margin-bottom: 0.5rem;
+                @include for-desktop-xl-up {
+                  font-size: 18px;
+                }
+              }
+              input[type="number"] {
+                width: 60px;
+                height: 40px;
+                text-align: center;
+                border: 2px solid $pink;
+                border-radius: 40px;
+                @include for-desktop-xl-up {
+                  width: 70px;
+                  height: 50px;
+                }
+              }
+            }
+          }
+        }
+      }
+      @include for-laptop {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include for-tablet {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 5rem;
+      button {
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+        @include for-desktop {
+          margin-bottom: 1rem;
+        }
+      }
+      @include for-tablet {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.subs-section {
+  position: relative;
+  padding: 12rem 0;
+  text-align: center;
+  .bg-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      @include for-desktop {
+        object-position: left;
+        opacity: 0.9;
+      }
+    }
+  }
+  &_inner {
+    width: 70%;
+    margin: 0 auto;
+    h2 {
+      margin-bottom: 2rem;
+    }
+    h4 {
+      margin-bottom: 2rem;
+    }
+  }
+  @include for-desktop-xl {
+    padding: 6rem 0;
+  }
+}
+
+.email-section {
+  position: relative;
+  padding: 12rem 0;
+  .bg-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    h2 {
+      margin-bottom: 1rem;
+    }
+    h4 {
+      margin-bottom: 2rem;
+    }
+    .form-wrapper {
+      .form-group {
+        input {
+          border: none;
+          border-radius: 40px;
+          padding: 19px 34px;
+          margin-right: 1rem;
+          @include placeholder {
+            color: #9c9c9c;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 800;
+            @include for-desktop-xl-up {
+              font-size: 24px;
+            }
+          }
+          @include for-desktop-xl-up {
+            padding: 35px 42px;
+            min-width: 370px;
+          }
+          @include for-laptop {
+            margin-right: 0;
+            margin-bottom: 1rem;
+          }
+        }
+        @include for-laptop {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+    @include for-laptop {
+      align-items: center;
+    }
+    @include for-tablet {
+      text-align: center;
+    }
+  }
+  @include for-desktop-xl {
+    padding: 10rem 0;
+  }
+  @include for-desktop {
+    padding: 6rem 0;
+  }
+}
+
+// checkbox toggle
+input.switch {
+  font-size: 2rem;
+  height: 0.7em;
+  display: inline-flex;
+  align-items: center;
+  width: 1.65em;
+  position: relative;
+  margin: 0.3em 0;
+  -moz-appearance: initial;
+
+  cursor: pointer;
+  @include for-desktop-xl-up {
+    font-size: 2.5rem;
+  }
+}
+
+.switch::before {
+  content: "";
+  display: inline-flex;
+  position: absolute;
+
+  height: 0.8em;
+  width: 1.4em;
+  padding: 0 0.2em;
+  background: #bdb9a6;
+  border-radius: 1em;
+
+  box-shadow: inset 0 0.1em 0.3em rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.switch::after {
+  content: "";
+  display: inline-flex;
+  position: absolute;
+
+  height: 1em;
+  width: 1em;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+}
+
+input.switch:checked::after {
+  -webkit-transform: translateX(80%);
+  -moz-transform: translateX(80%);
+  transform: translateX(80%);
+}
+
+input.switch:checked::before {
+  background: $pink;
+}
+.sub {
+  input.switch:checked::before {
+    background: $turq;
+  }
+}
+
+input.switch:disabled::before,
+input.switch:disabled::after {
+  background: #ccc;
+  cursor: not-allowed;
+}
+/* End Swich*/

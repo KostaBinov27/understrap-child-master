@@ -1,0 +1,278 @@
+.flex-section {
+  padding: 6rem 0;
+  position: relative;
+  &_inner {
+    &_top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      .content-wrapper {
+        max-width: calc(560px + 2rem);
+        min-width: calc(560px + 2rem);
+        margin-right: 2rem;
+        padding-right: 5rem;
+        h2 {
+          margin-bottom: 2rem;
+        }
+        h4 {
+          font-weight: normal;
+        }
+        @include for-desktop-xl-up {
+          max-width: calc(640px + 2rem);
+        }
+        @include for-desktop-xl {
+          max-width: calc(400px + 2rem);
+          min-width: calc(400px + 2rem);
+        }
+        @include for-desktop {
+          max-width: calc(340px + 2rem);
+          min-width: calc(340px + 2rem);
+        }
+        @include for-laptop {
+          max-width: 100%;
+          min-width: unset;
+          padding-right: 0;
+          margin-right: 0;
+        }
+      }
+      .img-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        img {
+          max-width: 280px;
+          @include for-desktop-xl-up {
+            max-width: 320px;
+          }
+          @include for-desktop-xl {
+            max-width: 200px;
+          }
+          @include for-desktop {
+            max-width: 170px;
+          }
+        }
+        @include for-laptop {
+          display: none;
+        }
+      }
+    }
+    &_bottom {
+      .img-wrapper {
+        display: grid;
+        grid-template-columns: 280px 280px 280px;
+        grid-gap: 2rem;
+        img {
+          max-width: 280px;
+          @include for-desktop-xl-up {
+            max-width: 320px;
+          }
+          @include for-desktop-xl {
+            max-width: 200px;
+          }
+          @include for-desktop {
+            max-width: 170px;
+          }
+        }
+        @include for-desktop-xl-up {
+          grid-template-columns: 320px 320px 320px;
+        }
+        @include for-desktop-xl {
+          grid-template-columns: 200px 200px 200px;
+        }
+        @include for-desktop {
+          grid-template-columns: 170px 170px 170px;
+        }
+        @include for-laptop {
+          margin-bottom: 2rem;
+        }
+        @include for-tablet {
+          display: none;
+        }
+      }
+      .img-wrapper-res {
+        display: none;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        img {
+          max-width: 170px;
+          @include for-phone {
+            max-width: 200px;
+          }
+        }
+        @include for-laptop {
+          display: grid;
+        }
+        @include for-phone {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+      @include for-laptop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+  .bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.what-section {
+  position: relative;
+  height: 500px;
+  .bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &_inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    position: relative;
+    top: 280px;
+    .box-wrapper {
+      padding: 2rem;
+      text-align: center;
+      background-color: #303030;
+      z-index: 1;
+      img {
+        margin-bottom: 2rem;
+      }
+      h2 {
+        margin-bottom: 2rem;
+        color: $white;
+        @include for-desktop-xl {
+          font-size: 44px;
+        }
+      }
+      h4 {
+        font-weight: normal;
+        @include for-desktop-xl {
+          font-size: 18px;
+        }
+      }
+      @include for-desktop {
+        padding: 2rem 1rem;
+      }
+    }
+    @include for-desktop {
+      top: 250px;
+    }
+    @include for-laptop {
+      top: -50px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  @include for-laptop {
+    height: 780px;
+  }
+  @include for-phone {
+    height: 880px;
+  }
+}
+
+.time-to-eat-section {
+  padding-top: 13rem;
+  padding-bottom: 6rem;
+  position: relative;
+  background-color: #f9f9f9;
+  &_inner {
+    display: flex;
+    align-items: center;
+    &_left {
+      flex: 0 0 30%;
+      margin-right: 10%;
+      h2 {
+        margin-bottom: 2rem;
+      }
+      h4 {
+        margin-bottom: 2rem;
+        font-weight: normal;
+      }
+      .form-wrapper {
+        .form-group {
+          input {
+            border: none;
+            border-radius: 40px;
+            padding: 19px 34px;
+            @include placeholder {
+              color: #9c9c9c;
+              font-size: 16px;
+              text-transform: uppercase;
+              font-weight: 800;
+            }
+          }
+        }
+      }
+      @include for-desktop-xl-up {
+        margin-right: 15%;
+      }
+      @include for-desktop {
+        flex: 0 0 40%;
+        margin-right: 5%;
+      }
+      @include for-laptop {
+        flex: 0 0 100%;
+        margin-right: 0;
+        margin-bottom: 5rem;
+      }
+    }
+    &_right {
+      .img-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          max-width: 800px;
+          @include for-desktop-xl-up {
+            max-width: 1000px;
+          }
+          @include for-desktop-xl {
+            max-width: 690px;
+          }
+          @include for-desktop {
+            max-width: 490px;
+          }
+          @include for-laptop {
+            max-width: 600px;
+          }
+          @include for-tablet {
+            max-width: 500px;
+          }
+          @include for-phone {
+            max-width: 300px;
+          }
+        }
+      }
+    }
+    @include for-laptop {
+      flex-direction: column;
+    }
+  }
+  @include for-desktop-xl-up {
+    padding-top: 15rem;
+  }
+  @include for-desktop {
+    padding-bottom: 6rem;
+  }
+}

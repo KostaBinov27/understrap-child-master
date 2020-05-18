@@ -1,0 +1,495 @@
+// hero section
+.hero-section {
+  height: 100vh;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($black, 0.15);
+  }
+  .img-wrapper {
+    height: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  .content-wrapper {
+    position: absolute;
+    bottom: 0;
+    padding-left: 12.5%;
+    z-index: 1;
+    bottom: 27%;
+    width: 720px;
+    h1 {
+      margin-bottom: 1rem;
+      @include for-desktop-xl-up {
+        font-size: 102px;
+        margin-bottom: 2rem;
+      }
+      @include for-desktop-xl {
+        font-size: 62px;
+      }
+      @include for-laptop {
+        font-size: 52px;
+      }
+      @include for-phone {
+        font-size: 42px;
+      }
+    }
+    h3 {
+      color: $white;
+      margin-bottom: 2rem;
+      @include for-desktop-xl-up {
+        font-size: 36px;
+        margin-bottom: 3rem;
+      }
+      @include for-desktop-xl {
+        font-size: 21px;
+      }
+      @include for-laptop {
+        font-size: 20px;
+      }
+    }
+    .btn {
+      @include for-desktop-xl-up {
+        font-size: 24px;
+        padding: 35px 42px;
+        border-radius: 50px;
+      }
+      @include for-desktop-xl {
+        padding: 22px 33px;
+      }
+    }
+    @include for-desktop-xl-up {
+      width: 1000px;
+      bottom: 33%;
+    }
+    @include for-laptop {
+      width: 70%;
+    }
+    @include for-tablet {
+      width: 80%;
+    }
+    @include for-phone {
+      width: 100%;
+      padding: 0 5%;
+    }
+  }
+}
+// simple section
+.simple-section {
+  padding: 130px 0;
+  position: relative;
+  &_inner {
+    display: flex;
+    align-items: flex-start;
+    &_left {
+      flex: 0 0 54%;
+      margin-right: 150px;
+      .content-wrapper {
+        h2 {
+          margin-bottom: 3rem;
+          @include for-desktop {
+            margin-bottom: 2rem;
+          }
+          @include for-laptop {
+            font-size: 44px;
+          }
+        }
+        p {
+          margin-bottom: 5rem;
+          @include for-desktop {
+            margin-bottom: 4rem;
+          }
+          @include for-laptop {
+            margin-bottom: 3rem;
+          }
+        }
+      }
+      .img-wrapper {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .img-res {
+          width: 70%;
+          margin: 0 auto;
+          margin-bottom: 2rem;
+        }
+      }
+      @include for-desktop-xl {
+        margin-right: 100px;
+      }
+      @include for-desktop {
+        margin-right: 75px;
+      }
+      @include for-laptop {
+        margin-right: 0;
+        flex: 0 0 100%;
+      }
+    }
+    &_right {
+      display: block;
+      .img-wrapper {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      @include for-laptop {
+        display: none;
+      }
+    }
+  }
+  @include for-desktop-xl-up {
+    padding: 160px 0;
+  }
+}
+
+.menu-section {
+  position: relative;
+  height: 90vh;
+  text-align: center;
+  .bg-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include for-laptop {
+        width: auto;
+      }
+    }
+  }
+  .section-heading {
+    margin-bottom: 100px;
+  }
+  &_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    .menu-item {
+      &:not(:last-child) {
+        @include for-laptop {
+          margin-bottom: 2rem;
+        }
+        @include for-phone {
+          margin-bottom: 3rem;
+        }
+      }
+      .menu-img-wrapper {
+        img {
+          width: 220px;
+          height: 100%;
+          object-fit: cover;
+          @include for-desktop-xl {
+            width: 185px;
+          }
+          @include for-desktop {
+            width: 165px;
+          }
+          @include for-laptop {
+            width: 135px;
+          }
+          @include for-phone {
+            width: 110px;
+          }
+        }
+      }
+    }
+    @include for-desktop-xl {
+      width: 100%;
+    }
+    @include for-laptop {
+      flex-direction: column;
+    }
+  }
+  @include for-laptop {
+    height: auto;
+  }
+  @include for-desktop-xl-up {
+    height: 60vh;
+  }
+}
+// customizer section
+.customizer-section {
+  padding: 100px 0;
+  &_inner {
+    display: flex;
+    align-items: center;
+    .img-grid {
+      flex: 0 0 50%;
+      &_inner {
+        display: flex;
+        align-items: center;
+        .img-wrapper {
+          position: relative;
+          -webkit-box-shadow: 0px 10px 70px 2px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: 0px 10px 70px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 10px 70px 2px rgba(0, 0, 0, 0.3);
+          &:not(:last-child) {
+            margin-right: 30px;
+          }
+          img {
+            width: 270px;
+            @media screen and (min-width: 1440px) and (max-width: 1850px) {
+              width: 200px;
+            }
+            @include for-desktop-xl {
+              width: 160px;
+            }
+            @include for-desktop {
+              width: 125px;
+            }
+            @include for-laptop {
+              width: 185px;
+            }
+            @include for-tablet {
+              width: 155px;
+            }
+            @include for-phone {
+              width: 95px;
+            }
+          }
+          .btn {
+            position: absolute;
+            left: 50%;
+            bottom: 10%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+      @include for-laptop {
+        flex: 0 0 100%;
+      }
+    }
+    .content-wrapper {
+      padding-left: 100px;
+      flex: 0 0 50%;
+      h3 {
+        margin-bottom: 20px;
+      }
+      h2 {
+        margin-bottom: 40px;
+        @include for-desktop {
+          margin-bottom: 30px;
+        }
+      }
+      p {
+        margin-bottom: 40px;
+      }
+      @include for-desktop {
+        padding-left: 60px;
+      }
+      @include for-laptop {
+        margin-bottom: 5rem;
+        padding-left: 0;
+      }
+    }
+    @include for-laptop {
+      flex-direction: column-reverse;
+    }
+  }
+}
+// delivery section
+.delivery-section {
+  padding: 100px 0;
+  background-color: $turq;
+  text-align: center;
+  h2 {
+    margin-bottom: 40px;
+  }
+  p {
+    margin-bottom: 80px;
+  }
+  .zip-form {
+    input {
+      background: transparent;
+      border: 2px solid white;
+      padding: 19px 34px;
+      border-radius: 40px;
+      color: $white;
+      &:focus {
+        outline: none;
+      }
+      @include placeholder {
+        color: $white;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+      @include for-desktop-xl-up {
+        padding: 35px 42px;
+        border-radius: 50px;
+      }
+      @include for-phone {
+        margin-bottom: 1rem;
+      }
+    }
+    @include for-phone {
+      text-align: left;
+    }
+  }
+}
+// get started section
+.get-started-section {
+  position: relative;
+  padding: 200px 0;
+  text-align: center;
+  &_inner {
+    h2 {
+      margin-bottom: 60px;
+    }
+    h3 {
+      margin-bottom: 60px;
+    }
+  }
+  .img-deco-left {
+    position: absolute;
+    left: 0;
+    bottom: 30%;
+    img {
+      width: 350px;
+      @include for-desktop-xl {
+        width: 220px;
+      }
+      @include for-desktop {
+        width: 165px;
+      }
+      @include for-laptop {
+        width: 135px;
+      }
+      @include for-tablet {
+        width: 105px;
+      }
+    }
+    @include for-desktop {
+      bottom: 35%;
+    }
+    @include for-laptop {
+      bottom: 40%;
+    }
+    @include for-tablet {
+      bottom: 20%;
+    }
+  }
+  .img-deco-right {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    img {
+      width: 350px;
+      @include for-desktop-xl {
+        width: 220px;
+      }
+      @include for-desktop {
+        width: 165px;
+      }
+      @include for-laptop {
+        width: 135px;
+      }
+      @include for-tablet {
+        width: 105px;
+      }
+    }
+    @include for-tablet {
+      top: 10%;
+    }
+  }
+  @include for-tablet {
+    padding: 150px 0;
+  }
+}
+// newsletter section
+.newsletter-section {
+  padding-top: 130px;
+  padding-bottom: 80px;
+  position: relative;
+  text-align: center;
+  .bg-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &_inner {
+    h2 {
+      margin-bottom: 50px;
+      @include for-laptop {
+        margin-bottom: 40px;
+      }
+    }
+    h3 {
+      margin-bottom: 65px;
+      @include for-laptop {
+        margin-bottom: 50px;
+      }
+    }
+    .form-wrapper {
+      padding: 45px 100px;
+      display: flex;
+      flex-direction: column;
+      width: max-content;
+      margin: 0 auto;
+      background-color: $white;
+      align-items: center;
+      -webkit-box-shadow: 0px 10px 70px 2px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 10px 70px 2px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 10px 70px 2px rgba(0, 0, 0, 0.3);
+      input {
+        background-color: transparent;
+        border: 2px solid $turq;
+        margin-bottom: 30px;
+        border-radius: 40px;
+        padding: 19px 34px;
+        width: 600px;
+        &:focus {
+          outline: none;
+        }
+        @include for-desktop {
+          width: 450px;
+        }
+        @include for-laptop {
+          width: 350px;
+        }
+        @include for-tablet {
+          width: 100%;
+        }
+      }
+      button {
+        width: max-content;
+        @include for-phone {
+          align-self: flex-start;
+        }
+      }
+      @include for-phone {
+        width: 100%;
+        padding: 40px 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,206 @@
+footer {
+  padding: 80px 0;
+  .footer-inner {
+    display: flex;
+    .footer-logo-wrapper {
+      margin-right: 200px;
+      img {
+        @include for-desktop-xl {
+          width: 180px;
+        }
+        @include for-desktop {
+          width: 145px;
+        }
+        @include for-laptop {
+          width: 185px;
+        }
+      }
+      @include for-desktop-xl {
+        margin-right: 100px;
+      }
+      @include for-desktop {
+        margin-right: 70px;
+      }
+      @include for-laptop {
+        margin: 0 auto;
+      }
+    }
+    .footer-group {
+      &:nth-of-type(1) {
+        margin-right: 120px;
+        @include for-desktop-xl {
+          margin-right: 50px;
+        }
+        @include for-desktop {
+          margin-right: 40px;
+        }
+      }
+      &:nth-of-type(2) {
+        margin-right: 130px;
+        align-self: center;
+        @include for-desktop-xl {
+          margin-right: 80px;
+        }
+        @include for-desktop {
+          margin-right: 40px;
+        }
+      }
+      &:nth-of-type(3) {
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        a {
+          &:first-child {
+            margin-bottom: 1rem;
+          }
+        }
+        @include for-desktop-xl-up {
+          margin-right: 0;
+        }
+        @include for-desktop-xl {
+          margin-right: 80px;
+        }
+        @include for-desktop {
+          max-width: 200px;
+        }
+      }
+      &:nth-of-type(4) {
+        align-self: center;
+        a {
+          &:first-child {
+            margin-right: 1rem;
+          }
+        }
+      }
+      ul {
+        list-style: none;
+        padding-left: 0;
+        li {
+          font-family: $poppins, sans-serif;
+          font-size: 16px;
+          font-weight: normal;
+          line-height: 24px;
+        }
+        &.uppercase {
+          text-transform: uppercase;
+        }
+      }
+      .ul-heading {
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      .text-bold {
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      a {
+        img {
+          width: 35px;
+        }
+      }
+    }
+    @include for-desktop-xl-up {
+      justify-content: space-between;
+    }
+    @include for-laptop {
+      flex-direction: column;
+    }
+  }
+  .footer-inner-mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    .footer-group {
+      &:nth-of-type(1) {
+        margin-right: 120px;
+        @include for-desktop-xl {
+          margin-right: 50px;
+        }
+        @include for-desktop {
+          margin-right: 40px;
+        }
+        @include for-tablet {
+          margin-right: 0;
+        }
+      }
+      &:nth-of-type(2) {
+        margin-right: 130px;
+        align-self: center;
+        @include for-desktop {
+          margin-right: 40px;
+        }
+        @include for-tablet {
+          margin-right: 0;
+        }
+      }
+      &:nth-of-type(3) {
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        a {
+          &:first-child {
+            margin-bottom: 1rem;
+          }
+        }
+        @include for-desktop {
+          max-width: 200px;
+        }
+        @include for-phone {
+          max-width: 100%;
+        }
+      }
+      &:nth-of-type(4) {
+        align-self: center;
+        a {
+          &:first-child {
+            margin-right: 1rem;
+            @include for-laptop {
+              margin-bottom: 1rem;
+              margin-right: 0;
+            }
+          }
+          @include for-tablet {
+            display: block;
+          }
+        }
+      }
+      ul {
+        list-style: none;
+        padding-left: 0;
+        li {
+          font-family: $poppins, sans-serif;
+          font-size: 16px;
+          font-weight: normal;
+          line-height: 24px;
+        }
+        &.uppercase {
+          text-transform: uppercase;
+        }
+      }
+      .ul-heading {
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      .text-bold {
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      a {
+        img {
+          width: 35px;
+        }
+      }
+    }
+    @include for-phone {
+      grid-template-columns: 100%;
+    }
+  }
+  .mobile-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}

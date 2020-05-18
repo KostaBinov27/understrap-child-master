@@ -1,0 +1,105 @@
+h1 {
+  font-size: 72px;
+  font-weight: 800;
+  color: $white;
+  text-transform: uppercase;
+  line-height: 1;
+  @include for-desktop-xl {
+    font-size: 68px;
+  }
+  @include for-desktop {
+    font-size: 63px;
+  }
+  @include for-laptop {
+    font-size: 56px;
+  }
+  @include for-tablet {
+    font-size: 50px;
+  }
+  @include for-phone {
+    font-size: 40px;
+  }
+}
+h2 {
+  font-size: 58px;
+  font-weight: 800;
+  @include for-desktop-xl-up {
+    font-size: 68px;
+  }
+  @include for-desktop-xl {
+    font-size: 54px;
+  }
+  @include for-desktop {
+    font-size: 50px;
+  }
+  @include for-laptop {
+    font-size: 40px;
+  }
+  @include for-phone {
+    font-size: 37px;
+  }
+}
+h3 {
+  font-size: 26px;
+  font-weight: 600;
+  &.meal-title {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 38px;
+    color: $turq;
+    text-transform: capitalize;
+  }
+}
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: $white;
+}
+p {
+  font-family: $poppins, "sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  margin: 0;
+  @include for-desktop-xl-up {
+    font-size: 18px;
+  }
+  &.meal-desc {
+    line-height: 1.2;
+  }
+}
+.meal-price {
+  font-size: 16px;
+  font-weight: 700;
+}
+.dot-normalize {
+  font-family: none;
+  font-family: none;
+  font-size: 90px;
+  line-height: 0;
+  @include for-laptop {
+    font-size: 80px;
+  }
+  @include for-phone {
+    font-size: 62px;
+  }
+}
+.text-white {
+  color: $white;
+}
+.text-pink {
+  color: $pink;
+}
+.text-turq {
+  color: $turq;
+}
+.text-yellow {
+  color: $yellow;
+}
+.text-crossed {
+  text-decoration: line-through;
+  text-decoration-color: $pink;
+}
+.text-black {
+  color: #2c2b2b;
+}

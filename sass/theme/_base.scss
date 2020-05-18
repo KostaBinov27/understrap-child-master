@@ -1,0 +1,134 @@
+body {
+  font-family: $poppins, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper-small {
+  width: 75%;
+  margin: 0 auto;
+  @include for-phone {
+    width: 90%;
+  }
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+a {
+  color: $black;
+  &:hover {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h2 {
+  line-height: 1;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 800;
+  color: $pink;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: $white;
+  border: none;
+  padding: 26px 36px;
+  font-size: 16px;
+  line-height: 1;
+  border-radius: 40px;
+  transition: 0.2s;
+  text-transform: uppercase;
+  &.btn-turq {
+    background-color: $turq;
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
+  &.btn-pink {
+    background-color: $pink;
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
+  &.btn-yellow {
+    background-color: $yellow;
+    color: $black;
+    &:hover {
+      color: $black;
+    }
+  }
+  &.btn-white-t {
+    color: $turq;
+    &:hover {
+      color: $turq;
+    }
+  }
+  &.btn-img {
+    @include for-phone {
+      padding: 15px 20px;
+      font-size: 13px;
+    }
+  }
+  &.btn-filter {
+    background-color: $white;
+    color: #303030;
+    border: 3px solid #303030;
+    &:hover {
+      color: $white;
+      background-color: #303030;
+    }
+    &.active {
+      color: $white;
+      background-color: #303030;
+    }
+  }
+  &:hover {
+    color: $pink;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  @include for-desktop-xl-up {
+    font-size: 24px;
+    padding: 35px 42px;
+    border-radius: 50px;
+  }
+  @include for-desktop-xl {
+    padding: 22px 33px;
+  }
+}
+
+.no-laptop {
+  @include for-laptop {
+    display: none;
+    @include for-tablet {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,422 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  transition: background-color 0.2s ease;
+  &.scrolled {
+    background-color: $pink;
+  }
+  .navbar {
+    background-color: transparent;
+    padding: 1rem 3rem;
+    .navbar-brand {
+      img {
+        width: 200px;
+        @include for-desktop-xl-up {
+          width: 300px;
+        }
+        @include for-laptop {
+          width: 180px;
+        }
+        @include for-tablet {
+          width: 130px;
+        }
+      }
+    }
+    .navbar-toggler {
+      &[aria-expanded="true"] {
+        span {
+          background-color: transparent;
+          transition: 0.3s;
+          &:before {
+            transform: rotate(45deg);
+            transform-origin: 0% 0%;
+            transition: 0.5s ease-in-out;
+          }
+          &:after {
+            transform: rotate(-45deg);
+            transform-origin: 0% 100%;
+            transition: 0.5s ease-in-out;
+          }
+        }
+      }
+      &:focus {
+        outline: none;
+      }
+      span {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 3px;
+        border-radius: 3px;
+        background-color: #fff;
+        transition: 0.3s 0.1s;
+        &:after {
+          content: "";
+          display: block;
+          position: relative;
+          width: 30px;
+          height: 3px;
+          border-radius: 3px;
+          background-color: #fff;
+          transition: 0.3s 0.1s;
+          position: absolute;
+          left: 0;
+          right: 0;
+          transition: 0.2s ease-in;
+          bottom: -10px;
+          transform: rotate(0deg);
+          transform-origin: 0% 100%;
+          background-color: #fff;
+        }
+        &:before {
+          content: "";
+          display: block;
+          position: relative;
+          width: 30px;
+          height: 3px;
+          border-radius: 3px;
+          background-color: #fff;
+          transition: 0.3s 0.1s;
+          position: absolute;
+          left: 0;
+          right: 0;
+          transition: 0.2s ease-in;
+          top: -10px;
+          bottom: -10px;
+          transform: rotate(0deg);
+          transform-origin: 0% 0%;
+          background-color: #fff;
+        }
+      }
+    }
+    .nav-link {
+      font-family: $poppins, "sans-serif";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: $white;
+      &:hover {
+        color: $white;
+      }
+      &:active {
+        color: $white;
+      }
+      @include for-tablet {
+        font-size: 15px;
+      }
+    }
+    .btn-nav-res {
+      margin-right: 1rem;
+      color: $pink;
+      &:hover {
+        color: $pink;
+      }
+      @include for-tablet {
+        font-size: 15px;
+      }
+    }
+    .navbar-collapse {
+      justify-content: flex-end;
+      .navbar-nav {
+        align-items: center;
+        .nav-item {
+          &:not(:last-child) {
+            .nav-link {
+              margin-right: 1.5rem;
+              @include for-desktop-xl-up {
+                margin-right: 3.5rem;
+              }
+              @include for-desktop {
+                margin-right: 0.5rem;
+                font-size: 15px;
+                padding-left: 0;
+                padding-right: 0;
+              }
+            }
+          }
+          .nav-link {
+            font-family: $poppins, "sans-serif";
+            font-style: normal;
+            font-weight: 800;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: $white;
+            &:hover {
+              color: $white;
+            }
+            &:active {
+              color: $white;
+            }
+            &.btn-white {
+              color: $pink;
+              padding: 26px 36px;
+              @include for-desktop-xl {
+                display: none;
+              }
+              @include for-tablet {
+                padding: 22px 33px;
+              }
+              @include for-phone {
+                display: block;
+              }
+            }
+            @include for-desktop-xl-up {
+              font-size: 18px;
+            }
+          }
+        }
+        @include for-laptop {
+          padding: 50px 0;
+        }
+      }
+    }
+    @include for-laptop {
+      padding: 1rem 5%;
+    }
+  }
+  @include for-laptop {
+    background-color: $pink;
+  }
+}
+
+.woocommerce-cart,.woocommerce-page{
+  .header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    transition: background-color 0.2s ease;
+    .navbar {
+      background-color: transparent;
+      padding: 1rem 3rem;
+      .navbar-brand {
+        img {
+          width: 200px;
+          @include for-desktop-xl-up {
+            width: 300px;
+          }
+          @include for-laptop {
+            width: 180px;
+          }
+          @include for-tablet {
+            width: 130px;
+          }
+        }
+      }
+      .navbar-toggler {
+        &[aria-expanded="true"] {
+          span {
+            background-color: transparent;
+            transition: 0.3s;
+            &:before {
+              transform: rotate(45deg);
+              transform-origin: 0% 0%;
+              transition: 0.5s ease-in-out;
+            }
+            &:after {
+              transform: rotate(-45deg);
+              transform-origin: 0% 100%;
+              transition: 0.5s ease-in-out;
+            }
+          }
+        }
+        &:focus {
+          outline: none;
+        }
+        span {
+          display: block;
+          position: relative;
+          width: 30px;
+          height: 3px;
+          border-radius: 3px;
+          background-color: #fff;
+          transition: 0.3s 0.1s;
+          &:after {
+            content: "";
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 3px;
+            border-radius: 3px;
+            background-color: #fff;
+            transition: 0.3s 0.1s;
+            position: absolute;
+            left: 0;
+            right: 0;
+            transition: 0.2s ease-in;
+            bottom: -10px;
+            transform: rotate(0deg);
+            transform-origin: 0% 100%;
+            background-color: #fff;
+          }
+          &:before {
+            content: "";
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 3px;
+            border-radius: 3px;
+            background-color: #fff;
+            transition: 0.3s 0.1s;
+            position: absolute;
+            left: 0;
+            right: 0;
+            transition: 0.2s ease-in;
+            top: -10px;
+            bottom: -10px;
+            transform: rotate(0deg);
+            transform-origin: 0% 0%;
+            background-color: #fff;
+          }
+        }
+      }
+      .nav-link {
+        font-family: $poppins, "sans-serif";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: $white;
+        &:hover {
+          color: $white;
+        }
+        &:active {
+          color: $white;
+        }
+        @include for-tablet {
+          font-size: 15px;
+        }
+      }
+      .btn-nav-res {
+        margin-right: 1rem;
+        color: $pink;
+        &:hover {
+          color: $pink;
+        }
+        @include for-tablet {
+          font-size: 15px;
+        }
+      }
+      .navbar-collapse {
+        justify-content: flex-end;
+        .navbar-nav {
+          align-items: center;
+          .nav-item {
+            &:not(:last-child) {
+              .nav-link {
+                margin-right: 1.5rem;
+                @include for-desktop-xl-up {
+                  margin-right: 3.5rem;
+                }
+                @include for-desktop {
+                  margin-right: 0.5rem;
+                  font-size: 15px;
+                  padding-left: 0;
+                  padding-right: 0;
+                }
+              }
+            }
+            .nav-link {
+              font-family: $poppins, "sans-serif";
+              font-style: normal;
+              font-weight: 800;
+              font-size: 1rem;
+              text-transform: uppercase;
+              color: $white;
+              &:hover {
+                color: $white;
+              }
+              &:active {
+                color: $white;
+              }
+              &.btn-white {
+                color: $pink;
+                padding: 26px 36px;
+                @include for-desktop-xl {
+                  display: none;
+                }
+                @include for-tablet {
+                  padding: 22px 33px;
+                }
+                @include for-phone {
+                  display: block;
+                }
+              }
+              @include for-desktop-xl-up {
+                font-size: 18px;
+              }
+            }
+          }
+          @include for-laptop {
+            padding: 50px 0;
+          }
+        }
+      }
+      @include for-laptop {
+        padding: 1rem 5%;
+      }
+    }
+    @include for-laptop {
+      background-color: $pink;
+    }
+  }
+  #page-wrapper{
+    width: 100%;
+    padding-top: 0;
+    #content{
+      width: 100%;
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      #primary{
+        padding-right: 0;
+      }
+    }
+  }
+  #right-sidebar{
+    display: none;
+  }
+  .entry-footer{
+    width: 70%;
+    margin: 0 auto;
+  }
+  .woocommerce-info{
+    border-top-color: $turq;
+  }
+  header{
+    display: none;
+  }
+}
+
+.entry-content{
+  .woocommerce{
+    .woocommerce-info,
+    .return-to-shop{
+      width: 70%;
+      margin: 0 auto;
+      @include for-tablet{
+        width: 100%;
+      }
+    }
+    .btn{
+      color: $white;
+      background-color: $turq;
+      &:hover{
+        color: $white;
+        background-color: $turq;
+      }
+      &:focus{
+        box-shadow: none;
+      }
+      &:active{
+        color: $white;
+        background-color: $turq;
+      }
+    }
+    .return-to-shop{
+      text-align: right;
+      margin-top: 3rem;
+    }
+  }
+}
