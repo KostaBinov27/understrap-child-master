@@ -35,11 +35,15 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 	</div>
 	<div class="wrapper h-100">
 	<div class="banner-section_inner">
-		<h1>Cart</h1>
+		<h1>Checkout</h1>
 	</div>
 	</div>
 </section>
+<div class="woocommerce-form-coupon-toggle">
+	<?php wc_print_notice( apply_filters( 'woocommerce_checkout_coupon_message', __( 'Have a coupon?', 'understrap' ) . ' <a href="#" class="showcoupon">' . __( 'Click here to enter your code', 'understrap' ) . '</a>' ), 'notice' ); ?>
+</div>
 <div class="cart-empty-pre mt-5">
+
 
 <div class="container">
 

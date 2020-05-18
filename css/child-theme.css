@@ -12214,15 +12214,6 @@ p {
 .woocommerce-cart header, .woocommerce-page header {
   display: none; }
 
-.entry-content .woocommerce .woocommerce-info,
-.entry-content .woocommerce .return-to-shop {
-  width: 70%;
-  margin: 0 auto; }
-  @media (max-width: 768px) {
-    .entry-content .woocommerce .woocommerce-info,
-    .entry-content .woocommerce .return-to-shop {
-      width: 100%; } }
-
 .entry-content .woocommerce .btn,
 .entry-content .woocommerce .wpcf7 input[type=submit], .wpcf7 .entry-content .woocommerce input[type=submit] {
   color: #ffffff;
@@ -13577,5 +13568,61 @@ input.switch:disabled::after {
   @media (max-width: 1200px) {
     .time-to-eat-section {
       padding-bottom: 6rem; } }
+
+.woocommerce-page {
+  overflow-x: hidden; }
+  .woocommerce-page .entry-footer {
+    display: none; }
+
+.page-id-31 {
+  overflow-x: hidden; }
+  .page-id-31 .btn.btn-outline-primary,
+  .page-id-31 .wpcf7 input[type=submit], .wpcf7 .page-id-31 input[type=submit] {
+    display: inline-block;
+    font-weight: 800;
+    color: #000000;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #fff;
+    border: none;
+    padding: .375rem .75rem;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 40px;
+    -webkit-transition: .2s;
+    transition: .2s;
+    text-transform: uppercase;
+    border: none;
+    padding: 6px 10px;
+    background-color: #ebe9eb;
+    color: #333;
+    border-radius: 0;
+    line-height: 1.5;
+    width: auto; }
+    .page-id-31 .btn.btn-outline-primary:hover, .page-id-31 .wpcf7 input:hover[type=submit], .wpcf7 .page-id-31 input:hover[type=submit] {
+      background-color: #ebe9eb;
+      color: #333; }
+  .page-id-31 .btn.btn-primary, .page-id-31 .wpcf7 input.btn-primary[type=submit], .wpcf7 .page-id-31 input.btn-primary[type=submit] {
+    width: auto; }
+  .page-id-31 .entry-footer {
+    display: none; }
+
+.woocommerce #place_order {
+  margin-left: auto; }
+
+.woocommerce .woocommerce-MyAccount-content form p {
+  display: block;
+  float: unset;
+  width: 100%; }
+
+.woocommerce .woocommerce-MyAccount-content form input {
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid gray; }
 
 /*# sourceMappingURL=child-theme.css.map */

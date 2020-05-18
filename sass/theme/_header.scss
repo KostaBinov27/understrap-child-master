@@ -391,14 +391,6 @@
 
 .entry-content{
   .woocommerce{
-    .woocommerce-info,
-    .return-to-shop{
-      width: 70%;
-      margin: 0 auto;
-      @include for-tablet{
-        width: 100%;
-      }
-    }
     .btn{
       color: $white;
       background-color: $turq;
