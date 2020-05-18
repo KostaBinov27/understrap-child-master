@@ -31,9 +31,8 @@ defined( 'ABSPATH' ) || exit;
 	</div>
 	</div>
 </section>
-<div class="cart-empty-pre">
+<div class="container mt-5 cart-empty-pre">
 <?php
-
 
 do_action( 'woocommerce_cart_is_empty' );
 

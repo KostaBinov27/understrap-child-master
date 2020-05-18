@@ -29,36 +29,52 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 ?>
 
-<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
+<section class="banner-section">
+	<div class="banner-bg">
+		<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cart-hero.png" alt="section-img" />
+	</div>
+	<div class="wrapper h-100">
+	<div class="banner-section_inner">
+		<h1>Cart</h1>
+	</div>
+	</div>
+</section>
+<div class="cart-empty-pre mt-5">
 
-	<?php if ( $checkout->get_checkout_fields() ) : ?>
+<div class="container">
 
-		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
+	<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
-		<div class="row" id="customer_details">
-			<div class="col-12 col-sm-7">
-				<?php do_action( 'woocommerce_checkout_billing' ); ?>
+		<?php if ( $checkout->get_checkout_fields() ) : ?>
+
+			<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
+
+			<div class="row" id="customer_details">
+				<div class="col-12 col-sm-7">
+					<?php do_action( 'woocommerce_checkout_billing' ); ?>
+				</div>
+
+				<div class="col-12 col-sm-5">
+					<?php do_action( 'woocommerce_checkout_shipping' ); ?>
+				</div>
 			</div>
 
-			<div class="col-12 col-sm-5">
-				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
-			</div>
+			<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
+
+		<?php endif; ?>
+
+		<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'understrap' ); ?></h3>
+
+		<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+
+		<div id="order_review" class="woocommerce-checkout-review-order">
+			<?php do_action( 'woocommerce_checkout_order_review' ); ?>
 		</div>
 
-		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
+		<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
 
-	<?php endif; ?>
+	</form>
 
-	<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'understrap' ); ?></h3>
+	<?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
 
-	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
-
-	<div id="order_review" class="woocommerce-checkout-review-order">
-		<?php do_action( 'woocommerce_checkout_order_review' ); ?>
-	</div>
-
-	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
-
-</form>
-
-<?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
+</div>
