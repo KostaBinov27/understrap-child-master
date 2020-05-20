@@ -55,6 +55,11 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_sidebar' );
 	?>
+	<div class="lanjo">
+			<div class="bg-wrapper">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/bg-cart.png" alt="bg-img">
+			</div>
+			<div class="container">
 		<?php
 	/**
 	 * Hook: woocommerce_after_single_product_summary.
@@ -65,6 +70,8 @@ get_header( 'shop' ); ?>
 	 */
 	do_action( 'woocommerce_after_single_product_summary' );
 	?>
+		</div>
+	</div>
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
