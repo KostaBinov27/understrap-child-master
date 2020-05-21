@@ -132,3 +132,97 @@ h2 {
     }
   }
 }
+
+$pill-border-radius: 0px !default;
+$pill-margin-x: 10px !default;
+$pill-margin-y: 15px !default;
+
+$pill-bg: $white !default;
+$pill-border: $pink(187, 187, 187) !default;
+$pill-font: $pink !default;
+
+$pill-hover-bg: $pink !default;
+$pill-hover-border: $pink !default;
+$pill-hover-font: $white !default;
+
+$pill-active-bg: $pink !default;
+$pill-active-border: $pink !default;
+$pill-active-font: $white !default;
+
+$pill-turq-border-radius: 0px !default;
+$pill-turq-margin-x: 10px !default;
+$pill-turq-margin-y: 15px !default;
+
+$pill-turq-bg: $white !default;
+$pill-turq-border: $turq(187, 187, 187) !default;
+$pill-turq-font: $turq !default;
+
+$pill-turq-hover-bg: $turq !default;
+$pill-turq-hover-border: $turq !default;
+$pill-turq-hover-font: $white !default;
+
+$pill-turq-active-bg: $turq !default;
+$pill-turq-active-border: $turq !default;
+$pill-turq-active-font: $white !default;
+
+.btn-pill {
+  border-radius: $pill-border-radius;
+  line-height: 1.2;
+  border: 1px solid;
+  padding: 17px 36px;
+
+  margin-bottom: $pill-margin-y;
+  margin-left: $pill-margin-x;
+
+  border-color: $pill-border;
+  background-color: $pill-bg;
+  color: $pill-font;
+
+  &.active {
+    border-color: $pill-active-border;
+    background-color: $pill-active-bg;
+    color: $pill-active-font;
+
+    box-shadow: none;
+  }
+
+  &:hover {
+    border-color: $pill-hover-border;
+    background-color: $pill-hover-bg;
+    color: $pill-hover-font;
+  }
+
+  input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+  }
+  &.pill-turq {
+    border-radius: $pill-turq-border-radius;
+    line-height: 1.2;
+
+    margin-bottom: $pill-turq-margin-y;
+    margin-left: $pill-turq-margin-x;
+
+    border-color: $pill-turq-border;
+    background-color: $pill-turq-bg;
+    color: $pill-turq-font;
+
+    &.active {
+      border-color: $pill-turq-active-border;
+      background-color: $pill-turq-active-bg;
+      color: $pill-turq-active-font;
+
+      box-shadow: none;
+    }
+
+    &:hover {
+      border-color: $pill-turq-hover-border;
+      background-color: $pill-turq-hover-bg;
+      color: $pill-turq-hover-font;
+    }
+  }
+  @include for-phone {
+    padding: 17px 20px;
+  }
+}
