@@ -1,0 +1,264 @@
+.meal-customization {
+  padding: 6rem 0;
+  &_inner {
+    .meals-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+      margin-bottom: 5rem;
+      .meal-item {
+        padding: 1rem;
+        .img-wrapper {
+          width: 100%;
+          height: 290px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 2rem;
+          position: relative;
+          &:after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 200px 200px 0 0;
+            border-color: #f8d40d transparent transparent transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+          }
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+          @include for-desktop-xl-up {
+            height: 400px;
+          }
+        }
+        .content-wrapper {
+          margin-bottom: 3rem;
+        }
+        .modal-title {
+          margin-bottom: 1rem;
+        }
+        .meal-desc {
+          margin-bottom: 1rem;
+        }
+        .alergens {
+          display: flex;
+          flex-direction: row;
+          list-style: none;
+          padding: 0;
+          li {
+            margin-right: 1rem;
+          }
+        }
+        .form-wrapper {
+          form {
+            display: flex;
+            align-items: center;
+            .form-group {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin-right: 3rem;
+              span {
+                margin-bottom: 0.5rem;
+                @include for-desktop-xl-up {
+                  font-size: 18px;
+                }
+              }
+              input[type="number"] {
+                width: 60px;
+                height: 40px;
+                text-align: center;
+                border: 2px solid $pink;
+                border-radius: 40px;
+                @include for-desktop-xl-up {
+                  width: 70px;
+                  height: 50px;
+                }
+              }
+            }
+          }
+        }
+      }
+      @include for-laptop {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include for-tablet {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+
+.modal {
+  .bg-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .modal-dialog {
+    width: 90%;
+    max-width: 90%;
+    margin: 1.75rem auto;
+  }
+  .modal-dialog-centered {
+    align-items: unset;
+  }
+  .modal-header {
+    border-bottom: none;
+    button {
+      border-radius: 50%;
+      width: 5rem;
+      height: 5rem;
+      color: $white;
+      background-color: $pink;
+      opacity: 1 !important;
+      position: relative;
+      right: -2rem;
+      top: -1rem;
+      padding: 0;
+      @include for-laptop {
+        width: 4rem;
+        height: 4rem;
+      }
+      @include for-tablet {
+        width: 3rem;
+        height: 3rem;
+        right: -1rem;
+      }
+    }
+  }
+  .modal-body {
+    padding: 2rem 6rem;
+    .customization-inner {
+      form {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include for-laptop {
+          display: block;
+        }
+      }
+      &_left {
+        flex: 0 0 45%;
+        margin-right: 5%;
+        .img-wrapper {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5rem 0;
+          img {
+            height: 100%;
+            width: 50%;
+            object-fit: cover;
+            z-index: 2;
+            @include for-desktop-xl {
+              width: 60%;
+            }
+            @include for-desktop {
+              width: 50%;
+            }
+          }
+          &:after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 290px 290px 0 0;
+            border-color: #f8d40d transparent transparent transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            @include for-desktop-xl-up {
+              border-width: 500px 500px 0 0;
+            }
+            @include for-desktop {
+              border-width: 250px 250px 0 0;
+            }
+          }
+        }
+        @include for-desktop {
+          margin-right: 3%;
+        }
+      }
+      &_right {
+        flex: 0 0 50%;
+        @include for-laptop {
+          display: flex;
+          justify-content: center;
+        }
+      }
+      &_bottom {
+        flex: 0 0 100%;
+        text-align: center;
+        margin-top: 5rem;
+        .modal-title {
+          margin-bottom: 3rem;
+          @include for-tablet {
+            margin-bottom: 2rem;
+          }
+        }
+        textarea {
+          border: 2px solid #e8e8e9;
+          border-radius: 40px;
+          width: 70%;
+          @include for-tablet {
+            width: 100%;
+          }
+        }
+        .button-wrapper {
+          text-align: center;
+          margin-top: 3rem;
+          width: 100%;
+        }
+      }
+    }
+    .customization-buttons {
+      .modal-title {
+        margin-bottom: 3rem;
+        @include for-tablet {
+          margin-bottom: 2rem;
+        }
+      }
+      .button-cat {
+        margin-bottom: 3rem;
+        &_title {
+          font-size: 30px;
+          font-weight: 800;
+          color: $pink;
+          margin-bottom: 1rem;
+          &.text-turq {
+            color: $turq;
+          }
+        }
+        .button-cat-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 1rem;
+          width: max-content;
+        }
+      }
+    }
+    @include for-laptop {
+      padding: 2rem 4rem;
+    }
+    @include for-tablet {
+      padding: 2rem 2rem;
+    }
+    @include for-phone {
+      padding: 1rem;
+    }
+  }
+}

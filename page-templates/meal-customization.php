@@ -15,7 +15,7 @@ get_header(); ?>
 
 <section class="banner-section">
       <div class="banner-bg">
-        <img src="./img/hero-customization.png" alt="section-img" />
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/hero-customization.png" alt="section-img" />
       </div>
       <div class="wrapper h-100">
         <div class="banner-section_inner">
@@ -33,7 +33,7 @@ get_header(); ?>
           <div class="meals-grid">
             <div class="meal-item">
               <div class="img-wrapper">
-                <img src="./img/meal-11.png" alt="meal-img" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
               </div>
               <div class="content-wrapper">
                 <a href="#"
@@ -47,8 +47,8 @@ get_header(); ?>
                   from 45 BC.<span class="meal-price">$9.95</span>
                 </p>
                 <ul class="alergens">
-                  <li><img src="./img/al-1.png" alt="alergen-icon" /></li>
-                  <li><img src="./img/al-2.png" alt="alergen-icon" /></li>
+                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
+                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
                 </ul>
               </div>
               <div class="btn-wrapper">
@@ -63,7 +63,7 @@ get_header(); ?>
             </div>
             <div class="meal-item">
               <div class="img-wrapper">
-                <img src="./img/meal-11.png" alt="meal-img" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
               </div>
               <div class="content-wrapper">
                 <a href="#"
@@ -77,8 +77,8 @@ get_header(); ?>
                   from 45 BC.<span class="meal-price">$9.95</span>
                 </p>
                 <ul class="alergens">
-                  <li><img src="./img/al-1.png" alt="alergen-icon" /></li>
-                  <li><img src="./img/al-2.png" alt="alergen-icon" /></li>
+                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
+                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
                 </ul>
               </div>
               <div class="btn-wrapper">
@@ -93,7 +93,7 @@ get_header(); ?>
             </div>
             <div class="meal-item">
               <div class="img-wrapper">
-                <img src="./img/meal-11.png" alt="meal-img" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
               </div>
               <div class="content-wrapper">
                 <a href="#"
@@ -107,8 +107,8 @@ get_header(); ?>
                   from 45 BC.<span class="meal-price">$9.95</span>
                 </p>
                 <ul class="alergens">
-                  <li><img src="./img/al-1.png" alt="alergen-icon" /></li>
-                  <li><img src="./img/al-2.png" alt="alergen-icon" /></li>
+                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
+                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
                 </ul>
               </div>
               <div class="btn-wrapper">
@@ -123,7 +123,7 @@ get_header(); ?>
             </div>
             <div class="meal-item">
               <div class="img-wrapper">
-                <img src="./img/meal-11.png" alt="meal-img" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
               </div>
               <div class="content-wrapper">
                 <a href="#"
@@ -137,8 +137,8 @@ get_header(); ?>
                   from 45 BC.<span class="meal-price">$9.95</span>
                 </p>
                 <ul class="alergens">
-                  <li><img src="./img/al-1.png" alt="alergen-icon" /></li>
-                  <li><img src="./img/al-2.png" alt="alergen-icon" /></li>
+                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
+                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
                 </ul>
               </div>
               <div class="btn-wrapper">
@@ -153,7 +153,7 @@ get_header(); ?>
             </div>
             <div class="meal-item">
               <div class="img-wrapper">
-                <img src="./img/meal-11.png" alt="meal-img" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
               </div>
               <div class="content-wrapper">
                 <a href="#"
@@ -167,8 +167,8 @@ get_header(); ?>
                   from 45 BC.<span class="meal-price">$9.95</span>
                 </p>
                 <ul class="alergens">
-                  <li><img src="./img/al-1.png" alt="alergen-icon" /></li>
-                  <li><img src="./img/al-2.png" alt="alergen-icon" /></li>
+                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
+                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
                 </ul>
               </div>
               <div class="btn-wrapper">
@@ -183,7 +183,7 @@ get_header(); ?>
             </div>
             <div class="meal-item">
               <div class="img-wrapper">
-                <img src="./img/meal-11.png" alt="meal-img" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
               </div>
               <div class="content-wrapper">
                 <a href="#"
@@ -197,8 +197,8 @@ get_header(); ?>
                   from 45 BC.<span class="meal-price">$9.95</span>
                 </p>
                 <ul class="alergens">
-                  <li><img src="./img/al-1.png" alt="alergen-icon" /></li>
-                  <li><img src="./img/al-2.png" alt="alergen-icon" /></li>
+                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
+                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
                 </ul>
               </div>
               <div class="btn-wrapper">
@@ -228,7 +228,7 @@ get_header(); ?>
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="bg-wrapper">
-            <img src="./img/veg-bg.png" alt="bg-image" />
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/veg-bg.png" alt="bg-image" />
           </div>
           <div class="modal-header">
             <button
@@ -245,7 +245,7 @@ get_header(); ?>
               <form action="">
                 <div class="customization-inner_left">
                   <div class="img-wrapper">
-                    <img src="./img/meal-3.png" alt="meal-img" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-3.png" alt="meal-img" />
                   </div>
                 </div>
                 <div class="customization-inner_right">
