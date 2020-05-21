@@ -23,7 +23,7 @@ get_header(); ?>
           <h4>Delicious curated dishes to get you started.</h4>
         </div>
       </div>
-    </section>
+  </section>
     <section class="meals-section">
       <div class="wrapper-small">
         <div class="meals-section_top">

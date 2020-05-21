@@ -27,6 +27,19 @@
       align-items: flex-start;
     }
   }
+  &.banner-hero{
+    height: 100vh;
+    h1{
+      @include for-desktop-xl-up{
+        font-size: 92px;
+      }
+    }
+    h4{
+      @include for-desktop-xl-up{
+        font-size: 40px;
+      }
+    }
+  }
 }
 
 .meals-section {

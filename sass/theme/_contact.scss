@@ -1,0 +1,230 @@
+.get-in-touch-section{
+    padding: 9rem 0;
+    position: relative;
+    text-align: center;
+    &_inner{
+        width: 50%;
+        margin:0 auto;
+        h2{
+            margin-bottom: 1rem;
+        }
+        h3{
+            color: $black;
+            margin-bottom: 1rem;
+        }
+        p{
+            padding: 0 3rem;
+            color: #959595;
+        }
+        .form-wrapper{
+            margin-top: 4rem;
+            .form-group{
+                margin-bottom: 2rem;
+                input{
+                    border: 2px solid rgba(127, 127, 127, .3);
+                    background-color: #fff;
+                    border-radius: 40px;
+                    padding: 1rem 2rem;
+                    width: 100%;
+                    &:focus{
+                        outline: none;
+                        border: 2px solid rgba(127, 127, 127, .7);
+                        background-color: #fdfdfd;
+                    }
+                }
+                textarea{
+                    border: 2px solid rgba(127, 127, 127, .3);
+                    background-color: #fff;
+                    border-radius: 40px;
+                    padding: 1rem 2rem;
+                    width: 100%;
+                    &:focus{
+                        outline: none;
+                        border: 2px solid rgba(127, 127, 127, .7);
+                        background-color: #fdfdfd;
+                    }
+                    @include placeholder{
+                        padding-left: 1rem;
+                        color: rgba(127, 127, 127, .5);
+                    }
+                }
+            }
+        }
+        @include for-desktop{
+            width: 70%;
+        }
+        @include for-phone{
+            width: 100%;
+        }
+    }
+    .bg-left-bottom{
+        position: absolute;
+        top: -13rem;
+        left: 0;
+        z-index: -3;
+        img{
+            @include for-desktop-xl{
+                max-width: 420px;
+            }
+            @include for-laptop{
+                max-width: 380px;
+            }
+            @include for-tablet{
+                max-width: 300px;
+            }
+        }
+        @include for-tablet{
+            top: -8rem
+        }
+        @include for-phone{
+            top: -13rem;
+            left: -6rem;
+        }
+    }
+    .bg-left-top{
+        position: absolute;
+        top: -13rem;
+        left: 0;
+        z-index: 4;
+        img{
+            max-width: 600px;
+            @include for-desktop-xl{
+                max-width: 410px;
+            }
+            @include for-laptop{
+                max-width: 360px;
+            }
+            @include for-tablet{
+                max-width: 270px;
+            }
+        }
+        @include for-tablet{
+            top: -8rem
+        }
+        @include for-phone{
+            top: -13rem;
+        }
+    }
+    .bg-right{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: none;
+        img{
+            @include for-desktop{
+                max-width: 200px;
+            }
+            @include for-laptop{
+                max-width: 170px;
+            }
+            @include for-tablet{
+                max-width: 100px;
+            }
+        }
+    }
+}
+
+.locations-section{
+    padding: 6rem 0;
+    text-align: center;
+    position: relative;
+    &_inner{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10rem;
+        margin-top: 5rem;
+        &_left{
+            p{
+                margin-bottom: 1rem;
+                span{
+                    font-weight: 700;
+                }
+            }
+            .map-wrapper{
+                height: 500px;
+                margin-bottom: 3rem;
+                @include for-desktop-xl{
+                    height: 400px;
+                }
+                @include for-desktop{
+                    height: 350px;
+                }
+                @include for-laptop{
+                    height: 320px;
+                }
+                @include for-tablet{
+                    height: 300px;
+                }
+            }
+        }
+        &_right{
+            p{
+                margin-bottom: 1rem;
+                span{
+                    font-weight: 700;
+                }
+            }
+            .map-wrapper{
+                height: 500px;
+                margin-bottom: 3rem;
+                @include for-desktop-xl{
+                    height: 400px;
+                }
+                @include for-desktop{
+                    height: 350px;
+                }
+                @include for-laptop{
+                    height: 320px;
+                }
+                @include for-tablet{
+                    height: 300px;
+                }
+            }
+        }
+        @include for-desktop-xl{
+            grid-gap: 7rem;
+        }
+        @include for-desktop{
+            grid-gap: 5rem;
+        }
+        @include for-laptop{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    .bg-left{
+        position: absolute;
+        left: 0;
+        top: 5rem;
+        z-index: -10;
+        img{
+            @include for-desktop-xl{
+                max-width: 150px;
+            }
+            @include for-desktop{
+                max-width: 130px;
+            }
+            @include for-laptop{
+                max-width: 110px;
+            }
+        }
+    }
+    .bg-right{
+        position: absolute;
+        right: 0;
+        top: 0rem;
+        z-index: -10;
+        img{
+            max-width: 200px;
+            @include for-desktop-xl{
+                max-width: 150px;
+            }
+            @include for-desktop{
+                max-width: 130px;
+            }
+            @include for-laptop{
+                max-width: 110px;
+            }
+        }
+    }
+}
