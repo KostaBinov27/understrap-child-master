@@ -14322,4 +14322,132 @@ input.switch:disabled::after {
         .locations-section .bg-right img {
           max-width: 110px; } }
 
+.choose-plan-section {
+  background-color: #f2f2f2;
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden; }
+  @media (max-width: 1200px) {
+    .choose-plan-section .wrapper-small {
+      width: 90%; } }
+  .choose-plan-section_top {
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    z-index: 1; }
+    @media (max-width: 1200px) {
+      .choose-plan-section_top {
+        width: 60%; } }
+  .choose-plan-section_inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem;
+    margin-bottom: 5rem; }
+    .choose-plan-section_inner .plan-single {
+      background-color: #ffffff; }
+      .choose-plan-section_inner .plan-single .img-wrapper {
+        margin-bottom: 2rem; }
+        .choose-plan-section_inner .plan-single .img-wrapper img {
+          height: 100%;
+          width: 100%;
+          -o-object-fit: cover;
+             object-fit: cover; }
+      .choose-plan-section_inner .plan-single .input-wrapper {
+        padding: 4rem 2rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .choose-plan-section_inner .plan-single .input-wrapper span {
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 5%;
+                  flex: 0 0 5%;
+          font-size: 20px;
+          font-weight: 700; }
+          .choose-plan-section_inner .plan-single .input-wrapper span:first-child {
+            margin-right: 1rem; }
+        .choose-plan-section_inner .plan-single .input-wrapper .sliderce {
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 80%;
+                  flex: 0 0 80%; }
+    @media (max-width: 1440px) {
+      .choose-plan-section_inner {
+        grid-gap: 3rem; } }
+    @media (max-width: 991px) {
+      .choose-plan-section_inner {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) {
+      .choose-plan-section_inner {
+        grid-template-columns: repeat(1, 1fr); } }
+  .choose-plan-section_bottom {
+    text-align: center; }
+    .choose-plan-section_bottom .total-wrapper {
+      padding: 2rem;
+      border: 3px solid #ffffff;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+      margin: 0 auto;
+      margin-bottom: 2rem; }
+  .choose-plan-section .bg-wrapper {
+    position: absolute;
+    z-index: 0; }
+    .choose-plan-section .bg-wrapper:first-of-type {
+      top: 0;
+      left: 0;
+      -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%); }
+    .choose-plan-section .bg-wrapper:not(:first-of-type) {
+      bottom: 0;
+      right: 0;
+      -webkit-transform: translate(0, 50%);
+              transform: translate(0, 50%); }
+    .choose-plan-section .bg-wrapper img {
+      max-width: 300px; }
+    @media (max-width: 991px) {
+      .choose-plan-section .bg-wrapper {
+        display: none; } }
+
+.noUi-horizontal {
+  height: 10px;
+  border-radius: 10px; }
+  .noUi-horizontal .noUi-handle {
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    top: -12px; }
+    .noUi-horizontal .noUi-handle:after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 13px;
+      width: 13px;
+      background: #252525;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      border-radius: 50%; }
+    .noUi-horizontal .noUi-handle:before {
+      display: none; }
+  .noUi-horizontal .noUi-tooltip {
+    background: #58a698;
+    padding: .5rem 1rem;
+    border-radius: 40px;
+    color: #ffffff;
+    font-weight: 800; }
+    @media (min-width: 1921px) {
+      .noUi-horizontal .noUi-tooltip {
+        font-size: 25px;
+        padding: 1rem; } }
+
+.noUi-connect {
+  background: #57a496; }
+
 /*# sourceMappingURL=child-theme.css.map */
