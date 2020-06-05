@@ -55,25 +55,25 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item active d-none">
-              <a class="nav-link" href="/moolay/">Home</a>
+              <a class="nav-link" href="<?php echo get_site_url(); ?>">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/moolay/our-meals/">Our meals</a>
+              <a class="nav-link" href="<?php echo get_site_url(); ?>/our-meals/">Our meals</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/moolay/how-it-works/">How it works</a>
+              <a class="nav-link" href="<?php echo get_site_url(); ?>/how-it-works/">How it works</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Fitbites grill</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact us</a>
+              <a class="nav-link" href="<?php echo get_site_url(); ?>/contact/">Contact us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link btn btn-white" href="/moolay/">Get started</a>
+              <a class="nav-link btn btn-white" id="getStartedPopup" data-toggle="modal" data-target="#exampleModal">Get started</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/moolay/my-account/">My account</a>
+              <a class="nav-link" href="<?php echo get_site_url(); ?>/my-account/">My account</a>
             </li>
           </ul>
         </div>
@@ -130,3 +130,30 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</nav><!-- .site-navigation -->
 
 	</div><!-- #wrapper-navbar end -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-custom" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="d-none modal-title text-center" id="exampleModalLabel">Choose Your Plan</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="text-center mb-5">
+            <h3>Choose Your Plan</h3>
+          </div>
+          <div class="row">
+            <div class="col-lg-5 m-auto text-center">
+              <a href="<?php echo get_site_url(); ?>/plan-selection/"><button type="button" class="btn btn-secondary-custom">WEEKLY</button></a>
+            </div>
+            <div class="col-lg-5 m-auto text-center">
+            <a href="<?php echo get_site_url(); ?>/meals-one-time/"><button type="button" class="btn btn-secondary-custom">ONE TIME</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -24,7 +24,7 @@ get_header(); ?>
     </div>
 </section>
 <section class="choose-plan-section">
-    <form action="">
+    <!-- <form action=""> -->
         <div class="wrapper-small">
             <div class="choose-plan-section_top">
                 <h2>How Many Meals Do You Want?</h2>
@@ -58,13 +58,14 @@ get_header(); ?>
             </div>
             <div class="choose-plan-section_bottom">
                 <div class="total-wrapper">
-                    <p class="meal-price">Total:<span>15 Meals</span></p>
-                    <p class="meal-price">Total:<span>15$</span></p>
+                    <p class="meal-price">Total: <span id="mealsCount">3</span> Meals</p>
+                    <p class="meal-price">Total: <span id="mealsPriceTotal">27</span>$</p>
                 </div>
-                <button class="btn btn-pink">Choose your plans</button>
+                <button class="btn btn-pink" id="choosePlansContinue">Choose your plans</button>
+                <button class="btn btn-pink m-auto" disabled id="spinerBtn" style="display:none;"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></button>
             </div>
         </div>
-    </form>
+    <!-- </form> -->
     <div class="bg-wrapper">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/deco-1.png" alt="">
     </div>
@@ -73,5 +74,11 @@ get_header(); ?>
     </div>
 </section>
 
+
+<script>
+    jQuery(document).ready(function ($) {
+        //  $.get('<?php echo get_site_url(); ?>/?post_type=product&add-to-cart=50,51,52,52,52,52,52', function() {});
+    });
+</script>
 <?php
 get_footer();

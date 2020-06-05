@@ -20,7 +20,7 @@ get_header(); ?>
       <div class="content-wrapper">
         <h1>Fresh meets flexible</h1>
         <h3>Fresh, delicious meals how you want them, when you want them.</h3>
-        <a href="javascript:void(0)" class="btn btn-white">Get started</a>
+        <a data-toggle="modal" data-target="#exampleModal" class="btn btn-white">Get started</a>
       </div>
     </section>
 
