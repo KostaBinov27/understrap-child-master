@@ -52,14 +52,9 @@ get_header(); ?>
             </div>
           </nav>
         </div>
-        <div class="meals-section_bottom">
+        <div class="meals-section_bottom" id="oneTimeWrap">
           <div class="tab-content" id="nav-tabContent">
-            <div
-              class="tab-pane fade show active"
-              id="nav-breakfast"
-              role="tabpanel"
-              aria-labelledby="nav-breakfast-tab"
-            >
+            <div class="tab-pane fade show active" id="nav-breakfast" role="tabpanel" aria-labelledby="nav-breakfast-tab">
               <div class="meals-grid">
               <?php
               $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'breakfast' );
@@ -70,16 +65,8 @@ get_header(); ?>
                     <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" />
                   </div>
                   <div class="content-wrapper">
-                    <a href="<?php echo get_permalink(); ?>"
-                      ><h3 class="meal-title">
-                        <?php the_title(); ?>
-                      </h3></a
-                    >
-                    <p class="meal-desc">
-                    <?php the_excerpt(); ?><span class="meal-price"
-                        ><?php echo $product->get_regular_price(); ?></span
-                      >
-                    </p>
+                    <a href="<?php echo get_permalink(); ?>"><h3 class="meal-title"> <?php the_title(); ?></h3></a>
+                    <p class="meal-desc"><?php the_excerpt(); ?><span class="meal-price"><?php echo $product->get_regular_price(); ?></span></p>
                     <ul class="alergens">
                       <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
                       <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
@@ -88,11 +75,11 @@ get_header(); ?>
                       <form action="">
                         <div class="form-group">
                           <span>Quantity</span>
-                          <input min="1" type="number" />
+                          <input min="1" type="number" class="<?php echo the_ID(); ?>"/>
                         </div>
                         <div class="form-group">
                           <span>Add to cart</span>
-                          <input class="switch right" type="checkbox" />
+                          <input class="switch right" type="checkbox" product-id="<?php echo the_ID(); ?>"/>
                         </div>
                       </form>
                     </div>
@@ -100,9 +87,6 @@ get_header(); ?>
                 </div>
               <?php endwhile; ?>
               <?php wp_reset_query(); ?>
-              </div>
-              <div class="btn-wrapper text-center">
-                <a href="#" class="btn btn-yellow">Continue to cart</a>
               </div>
             </div>
             <div
@@ -122,7 +106,7 @@ get_header(); ?>
               <div id="beefWrap">
                 <div class="meals-grid">
                 <?php
-                $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'beef	' );
+                $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'beef' );
                 $loop = new WP_Query( $args );
                 while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
                   <div class="meal-item">
@@ -148,11 +132,11 @@ get_header(); ?>
                         <form action="">
                           <div class="form-group">
                             <span>Quantity</span>
-                            <input min="1" type="number" />
+                            <input min="1" type="number" class="<?php echo the_ID(); ?>"/>
                           </div>
                           <div class="form-group">
                             <span>Add to cart</span>
-                            <input class="switch right" type="checkbox" />
+                            <input class="switch right" type="checkbox" product-id="<?php echo the_ID(); ?>"/>
                           </div>
                         </form>
                       </div>
@@ -162,10 +146,10 @@ get_header(); ?>
                 <?php wp_reset_query(); ?>
                 </div>
               </div>
-              <div id="chickenWrap">
+              <div id="chickenWrap" style="display: none;">
                 <div class="meals-grid">
                 <?php
-                $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'beef	' );
+                $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'chicken' );
                 $loop = new WP_Query( $args );
                 while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
                   <div class="meal-item">
@@ -191,11 +175,11 @@ get_header(); ?>
                         <form action="">
                           <div class="form-group">
                             <span>Quantity</span>
-                            <input min="1" type="number" />
+                            <input min="1" type="number" class="<?php echo the_ID(); ?>"/>
                           </div>
                           <div class="form-group">
                             <span>Add to cart</span>
-                            <input class="switch right" type="checkbox" />
+                            <input class="switch right" type="checkbox" product-id="<?php echo the_ID(); ?>"/>
                           </div>
                         </form>
                       </div>
@@ -205,10 +189,10 @@ get_header(); ?>
                 <?php wp_reset_query(); ?>
                 </div>
               </div>
-              <div id="turkeyWrap">
+              <div id="turkeyWrap" style="display: none;">
                 <div class="meals-grid">
                 <?php
-                $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'beef	' );
+                $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'turkey' );
                 $loop = new WP_Query( $args );
                 while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
                   <div class="meal-item">
@@ -234,11 +218,11 @@ get_header(); ?>
                         <form action="">
                           <div class="form-group">
                             <span>Quantity</span>
-                            <input min="1" type="number" />
+                            <input min="1" type="number" class="<?php echo the_ID(); ?>"/>
                           </div>
                           <div class="form-group">
                             <span>Add to cart</span>
-                            <input class="switch right" type="checkbox" />
+                            <input class="switch right" type="checkbox" product-id="<?php echo the_ID(); ?>"/>
                           </div>
                         </form>
                       </div>
@@ -248,10 +232,10 @@ get_header(); ?>
                 <?php wp_reset_query(); ?>
                 </div>
               </div>
-              <div id="fishWrap">
+              <div id="fishWrap" style="display: none;">
                 <div class="meals-grid">
                 <?php
-                $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'beef	' );
+                $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'fish' );
                 $loop = new WP_Query( $args );
                 while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
                   <div class="meal-item">
@@ -277,11 +261,11 @@ get_header(); ?>
                         <form action="">
                           <div class="form-group">
                             <span>Quantity</span>
-                            <input min="1" type="number" />
+                            <input min="1" type="number" class="<?php echo the_ID(); ?>"/>
                           </div>
                           <div class="form-group">
                             <span>Add to cart</span>
-                            <input class="switch right" type="checkbox" />
+                            <input class="switch right" type="checkbox" product-id="<?php echo the_ID(); ?>"/>
                           </div>
                         </form>
                       </div>
@@ -291,10 +275,10 @@ get_header(); ?>
                 <?php wp_reset_query(); ?>
                 </div>
               </div>
-              <div id="vegeWrap">
+              <div id="vegeWrap" style="display: none;">
                 <div class="meals-grid">
                 <?php
-                $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'beef	' );
+                $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'meatless' );
                 $loop = new WP_Query( $args );
                 while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
                   <div class="meal-item">
@@ -320,11 +304,11 @@ get_header(); ?>
                         <form action="">
                           <div class="form-group">
                             <span>Quantity</span>
-                            <input min="1" type="number" />
+                            <input min="1" type="number" class="<?php echo the_ID(); ?>"/>
                           </div>
                           <div class="form-group">
                             <span>Add to cart</span>
-                            <input class="switch right" type="checkbox" />
+                            <input class="switch right" type="checkbox" product-id="<?php echo the_ID(); ?>"/>
                           </div>
                         </form>
                       </div>
@@ -334,9 +318,12 @@ get_header(); ?>
                 <?php wp_reset_query(); ?>
                 </div>
               </div>
-              <div class="btn-wrapper text-center">
-                <a href="#" class="btn btn-yellow">Customize</a>
-              </div>
+            </div>
+          </div>
+          <div class="btn-wrapper text-center">
+            <a id="continueToCartOneTime" class="btn btn-yellow">Continue to cart</a>
+            <div id="errorMessageOnetime" class="alert alert-danger mt-5" role="alert" style="display: none;">
+              Please add quantity on selected products!
             </div>
           </div>
         </div>

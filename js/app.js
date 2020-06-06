@@ -13,52 +13,54 @@ jQuery(document).ready(function () {
   var rangeSliderMeat = document.getElementById('slider-range-meat');
   var rangeSliderVege = document.getElementById('slider-range-vege');
 
-  // noUiSlider.create(rangeSliderBreak, {
-  //   start: [1],
-  //   step: 1,
-  //   connect: [true, false],
-  //   tooltips: wNumb({ decimals: 0 }),
-  //   range: {
-  //     'min': [1],
-  //     'max': [10]
-  //   },
-  //   pips: {
-  //     mode: 'values',
-  //     values: [1, 2, 5, 10],
-  //     density: [10, 20, 50, 100]
-  //   }
-  // });
-  // noUiSlider.create(rangeSliderMeat, {
-  //   start: [1],
-  //   step: 1,
-  //   connect: [true, false],
-  //   tooltips: wNumb({ decimals: 0 }),
-  //   range: {
-  //     'min': [1],
-  //     'max': [10]
-  //   },
-  //   pips: {
-  //     mode: 'values',
-  //     values: [1, 2, 5, 10],
-  //     density: [10, 20, 50, 100]
-  //   }
-  // });
-  // noUiSlider.create(rangeSliderVege, {
-  //   start: [1],
-  //   step: 1,
-  //   connect: [true, false],
-  //   tooltips: wNumb({ decimals: 0 }),
-  //   range: {
-  //     'min': [1],
-  //     'max': [10]
-  //   },
-  //   pips: {
-  //     mode: 'values',
-  //     values: [1, 2, 5, 10],
-  //     density: [10, 10, 40, 50]
-  //   }
-  // });
-
+  if (rangeSliderBreak){
+    noUiSlider.create(rangeSliderBreak, {
+      start: [1],
+      step: 1,
+      connect: [true, false],
+      tooltips: wNumb({ decimals: 0 }),
+      range: {
+        'min': [1],
+        'max': [10]
+      },
+      pips: {
+        mode: 'values',
+        values: [1, 2, 5, 10],
+        density: [10, 20, 50, 100]
+      }
+    });
+    noUiSlider.create(rangeSliderMeat, {
+      start: [1],
+      step: 1,
+      connect: [true, false],
+      tooltips: wNumb({ decimals: 0 }),
+      range: {
+        'min': [1],
+        'max': [10]
+      },
+      pips: {
+        mode: 'values',
+        values: [1, 2, 5, 10],
+        density: [10, 20, 50, 100]
+      }
+    });
+    noUiSlider.create(rangeSliderVege, {
+      start: [1],
+      step: 1,
+      connect: [true, false],
+      tooltips: wNumb({ decimals: 0 }),
+      range: {
+        'min': [1],
+        'max': [10]
+      },
+      pips: {
+        mode: 'values',
+        values: [1, 2, 5, 10],
+        density: [10, 10, 40, 50]
+      }
+    });
+  }
+  
   let sum = 0;
   let sumPrice = 0;
   let a;
@@ -182,7 +184,7 @@ jQuery(document).ready(function () {
     jQuery("#fish").removeClass('active');
     jQuery("#vege").removeClass('active');
     
-    jQuery("#chicken").show();
+    jQuery("#chickenWrap").show();
     jQuery("#beefWrap").hide();
     jQuery("#turkeyWrap").hide();
     jQuery("#fishWrap").hide();
@@ -227,4 +229,26 @@ jQuery(document).ready(function () {
     jQuery("#turkeyWrap").hide();
     jQuery("#fishWrap").hide();
   });
+
+  jQuery( "#continueToCartOneTime" ).click(function() {
+    var selected = '';
+    var flag;
+    jQuery('#oneTimeWrap input:checked').each(function() {
+        var id = jQuery(this).attr('product-id');
+        if (jQuery("."+id).val()){
+          for (var i = 1; i <= jQuery("."+id).val(); i++){
+            selected = selected + ',' + jQuery(this).attr('product-id'); 
+          }
+        } else {
+          flag = 1;
+        }
+    });
+    if (flag == 1){
+      jQuery( "#errorMessageOnetime" ).show();
+    } else {
+      selected = selected.substr(1);
+      console.log(selected);
+    }
+  });
+
 });
