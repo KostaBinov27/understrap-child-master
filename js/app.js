@@ -230,9 +230,10 @@ jQuery(document).ready(function () {
     jQuery("#fishWrap").hide();
   });
 
-  jQuery( "#continueToCartOneTime" ).click(function() {
+  jQuery( "#continueToCustomizeOneTime" ).click(function() {
     var selected = '';
     var flag;
+    var url = window.location.href;
     jQuery('#oneTimeWrap input:checked').each(function() {
         var id = jQuery(this).attr('product-id');
         if (jQuery("."+id).val()){
@@ -247,6 +248,32 @@ jQuery(document).ready(function () {
       jQuery( "#errorMessageOnetime" ).show();
     } else {
       selected = selected.substr(1);
+      jQuery.get(url+'?add-to-cart='+selected, function() {});
+      setTimeout(function(){ 
+        window.location.href = document.location.origin+"/moolay/cart/";
+      }, 3000);
+      
+    }
+  });
+
+  jQuery( "#continueToCustomizeSubscription" ).click(function() {
+    var selected = '';
+    var flag;
+    var url = window.location.href;
+    jQuery('#subscribeTimeWrap input:checked').each(function() {
+        var id = jQuery(this).attr('product-id');
+        if (id){
+          selected = selected + ',' + jQuery(this).attr('product-id'); 
+        } else {
+          flag = 1;
+        }
+    });
+    if (flag == 1){
+      jQuery( "#errorMessageSubscribe" ).show();
+    } else {
+      selected = selected.substr(1);
+      jQuery.get(url+'?add-to-cart='+selected, function() {});
+      window.location.href = document.location.origin+"/moolay/meal-customization/";
       console.log(selected);
     }
   });

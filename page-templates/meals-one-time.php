@@ -75,11 +75,10 @@ get_header(); ?>
                       <form action="">
                         <div class="form-group">
                           <span>Quantity</span>
-                          <input min="1" type="number" class="<?php echo the_ID(); ?>"/>
+                          <input min="1" type="number" value="1" class="<?php echo the_ID(); ?>"/>
                         </div>
                         <div class="form-group">
-                          <span>Add to cart</span>
-                          <input class="switch right" type="checkbox" product-id="<?php echo the_ID(); ?>"/>
+                          <a id="continueToCustomizeOneTime" class="btn btn-yellow">GO TO CART</a>
                         </div>
                       </form>
                     </div>
@@ -132,7 +131,7 @@ get_header(); ?>
                         <form action="">
                           <div class="form-group">
                             <span>Quantity</span>
-                            <input min="1" type="number" class="<?php echo the_ID(); ?>"/>
+                            <input min="1" type="number" value="1" class="<?php echo the_ID(); ?>"/>
                           </div>
                           <div class="form-group">
                             <span>Add to cart</span>
@@ -175,7 +174,7 @@ get_header(); ?>
                         <form action="">
                           <div class="form-group">
                             <span>Quantity</span>
-                            <input min="1" type="number" class="<?php echo the_ID(); ?>"/>
+                            <input min="1" type="number" value="1" class="<?php echo the_ID(); ?>"/>
                           </div>
                           <div class="form-group">
                             <span>Add to cart</span>
@@ -218,7 +217,7 @@ get_header(); ?>
                         <form action="">
                           <div class="form-group">
                             <span>Quantity</span>
-                            <input min="1" type="number" class="<?php echo the_ID(); ?>"/>
+                            <input min="1" type="number" value="1" class="<?php echo the_ID(); ?>"/>
                           </div>
                           <div class="form-group">
                             <span>Add to cart</span>
@@ -261,7 +260,7 @@ get_header(); ?>
                         <form action="">
                           <div class="form-group">
                             <span>Quantity</span>
-                            <input min="1" type="number" class="<?php echo the_ID(); ?>"/>
+                            <input min="1" type="number" value="1" class="<?php echo the_ID(); ?>"/>
                           </div>
                           <div class="form-group">
                             <span>Add to cart</span>
@@ -304,7 +303,11 @@ get_header(); ?>
                         <form action="">
                           <div class="form-group">
                             <span>Quantity</span>
-                            <input min="1" type="number" class="<?php echo the_ID(); ?>"/>
+                            <input min="1" type="number" value="1" class="<?php echo the_ID(); ?>"/>
+                          </div>
+                          <div class="form-group">
+                            <span>Add to cart</span>
+                            <input class="switch right" type="checkbox" product-id="<?php echo the_ID(); ?>"/>
                           </div>
                           <div class="form-group">
                             <span>Add to cart</span>
@@ -321,7 +324,7 @@ get_header(); ?>
             </div>
           </div>
           <div class="btn-wrapper text-center">
-            <a id="continueToCartOneTime" class="btn btn-yellow">Continue to cart</a>
+            <a id="continueToCustomizeOneTime" class="btn btn-yellow">GO TO CART</a>
             <div id="errorMessageOnetime" class="alert alert-danger mt-5" role="alert" style="display: none;">
               Please add quantity on selected products!
             </div>

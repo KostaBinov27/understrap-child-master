@@ -31,212 +31,57 @@ get_header(); ?>
       <div class="wrapper-small">
         <div class="meal-customization_inner">
           <div class="meals-grid">
-            <div class="meal-item">
-              <div class="img-wrapper">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
+          <?php
+            global $woocommerce;
+            $items = $woocommerce->cart->get_cart();
+            foreach($items as $item => $values) { ?>
+              <div class="meal-item">
+                <div class="img-wrapper">
+                  <?php
+                  $_product =  wc_get_product( $values['data']->get_id() );
+                  // print_r($_product);
+                  //product image
+                  $getProductDetail = wc_get_product( $values['product_id'] );
+                  echo $getProductDetail->get_image(); // accepts 2 arguments ( size, attr ) ?>
+                </div>
+                <div class="content-wrapper">
+                  <a href="#"> <h3 class="meal-title"> <?php  echo $_product->get_title(); $values['quantity'];  ?></h3></a>
+                  <p class="meal-desc">
+                    <?php
+                    $price = get_post_meta($values['product_id'] , '_price', true); ?>
+                    <?php echo $_product->short_description; ?><span class="meal-price"><?php echo $price; ?></span>
+                  </p>
+                  <ul class="alergens">
+                    <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
+                    <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
+                  </ul>
+                </div>
+                <div class="btn-wrapper">
+                  <a
+                    href="#"
+                    class="btn btn-pink"
+                    data-toggle="modal"
+                    data-target="#exampleModalCenter"
+                    >Customize</a
+                  >
+                </div>
               </div>
-              <div class="content-wrapper">
-                <a href="#"
-                  ><h3 class="meal-title">
-                    Teryiaki Chicken With Brown Rice
-                  </h3></a
-                >
-                <p class="meal-desc">
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature
-                  from 45 BC.<span class="meal-price">$9.95</span>
-                </p>
-                <ul class="alergens">
-                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                </ul>
-              </div>
-              <div class="btn-wrapper">
-                <a
-                  href="#"
-                  class="btn btn-pink"
-                  data-toggle="modal"
-                  data-target="#exampleModalCenter"
-                  >Customize</a
-                >
-              </div>
-            </div>
-            <div class="meal-item">
-              <div class="img-wrapper">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
-              </div>
-              <div class="content-wrapper">
-                <a href="#"
-                  ><h3 class="meal-title">
-                    Teryiaki Chicken With Brown Rice
-                  </h3></a
-                >
-                <p class="meal-desc">
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature
-                  from 45 BC.<span class="meal-price">$9.95</span>
-                </p>
-                <ul class="alergens">
-                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                </ul>
-              </div>
-              <div class="btn-wrapper">
-                <a
-                  href="#"
-                  class="btn btn-pink"
-                  data-toggle="modal"
-                  data-target="#exampleModalCenter"
-                  >Customize</a
-                >
-              </div>
-            </div>
-            <div class="meal-item">
-              <div class="img-wrapper">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
-              </div>
-              <div class="content-wrapper">
-                <a href="#"
-                  ><h3 class="meal-title">
-                    Teryiaki Chicken With Brown Rice
-                  </h3></a
-                >
-                <p class="meal-desc">
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature
-                  from 45 BC.<span class="meal-price">$9.95</span>
-                </p>
-                <ul class="alergens">
-                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                </ul>
-              </div>
-              <div class="btn-wrapper">
-                <a
-                  href="#"
-                  class="btn btn-pink"
-                  data-toggle="modal"
-                  data-target="#exampleModalCenter"
-                  >Customize</a
-                >
-              </div>
-            </div>
-            <div class="meal-item">
-              <div class="img-wrapper">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
-              </div>
-              <div class="content-wrapper">
-                <a href="#"
-                  ><h3 class="meal-title">
-                    Teryiaki Chicken With Brown Rice
-                  </h3></a
-                >
-                <p class="meal-desc">
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature
-                  from 45 BC.<span class="meal-price">$9.95</span>
-                </p>
-                <ul class="alergens">
-                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                </ul>
-              </div>
-              <div class="btn-wrapper">
-                <a
-                  href="#"
-                  class="btn btn-pink"
-                  data-toggle="modal"
-                  data-target="#exampleModalCenter"
-                  >Customize</a
-                >
-              </div>
-            </div>
-            <div class="meal-item">
-              <div class="img-wrapper">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
-              </div>
-              <div class="content-wrapper">
-                <a href="#"
-                  ><h3 class="meal-title">
-                    Teryiaki Chicken With Brown Rice
-                  </h3></a
-                >
-                <p class="meal-desc">
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature
-                  from 45 BC.<span class="meal-price">$9.95</span>
-                </p>
-                <ul class="alergens">
-                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                </ul>
-              </div>
-              <div class="btn-wrapper">
-                <a
-                  href="#"
-                  class="btn btn-pink"
-                  data-toggle="modal"
-                  data-target="#exampleModalCenter"
-                  >Customize</a
-                >
-              </div>
-            </div>
-            <div class="meal-item">
-              <div class="img-wrapper">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
-              </div>
-              <div class="content-wrapper">
-                <a href="#"
-                  ><h3 class="meal-title">
-                    Teryiaki Chicken With Brown Rice
-                  </h3></a
-                >
-                <p class="meal-desc">
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature
-                  from 45 BC.<span class="meal-price">$9.95</span>
-                </p>
-                <ul class="alergens">
-                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                  <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                </ul>
-              </div>
-              <div class="btn-wrapper">
-                <a
-                  href="#"
-                  class="btn btn-pink"
-                  data-toggle="modal"
-                  data-target="#exampleModalCenter"
-                  >Customize</a
-                >
-              </div>
-            </div>
+              <?php
+            } ?>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModalCenter"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalCenterTitle"
-      aria-hidden="true"
-    >
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="bg-wrapper">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/veg-bg.png" alt="bg-image" />
           </div>
           <div class="modal-header">
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>

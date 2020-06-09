@@ -77,7 +77,7 @@ get_header(); ?>
                           <form action="">
                             <div class="form-group sub">
                                 <span>Subscribe</span>
-                                <input class="switch right" type="checkbox" />
+                                <input class="switch right" type="checkbox" product-id="<?php echo the_ID(); ?>"/>
                             </div>
                           </form>
                       </div>
@@ -85,9 +85,6 @@ get_header(); ?>
                 </div>
               <?php endwhile; ?>
               <?php wp_reset_query(); ?>
-              </div>
-              <div class="btn-wrapper text-center">
-                <a href="#" class="btn btn-yellow">Continue to cart</a>
               </div>
             </div>
             <div
@@ -133,7 +130,7 @@ get_header(); ?>
                           <form action="">
                             <div class="form-group sub">
                                 <span>Subscribe</span>
-                                <input class="switch right" type="checkbox" />
+                                <input class="switch right" type="checkbox" product-id="<?php echo the_ID(); ?>"/>
                             </div>
                           </form>
                       </div>
@@ -172,7 +169,7 @@ get_header(); ?>
                           <form action="">
                             <div class="form-group sub">
                                 <span>Subscribe</span>
-                                <input class="switch right" type="checkbox" />
+                                <input class="switch right" type="checkbox" product-id="<?php echo the_ID(); ?>"/>
                             </div>
                           </form>
                       </div>
@@ -211,7 +208,7 @@ get_header(); ?>
                           <form action="">
                             <div class="form-group sub">
                                 <span>Subscribe</span>
-                                <input class="switch right" type="checkbox" />
+                                <input class="switch right" type="checkbox" product-id="<?php echo the_ID(); ?>"/>
                             </div>
                           </form>
                       </div>
@@ -250,7 +247,7 @@ get_header(); ?>
                           <form action="">
                             <div class="form-group sub">
                                 <span>Subscribe</span>
-                                <input class="switch right" type="checkbox" />
+                                <input class="switch right" type="checkbox" product-id="<?php echo the_ID(); ?>"/>
                             </div>
                           </form>
                       </div>
@@ -289,7 +286,7 @@ get_header(); ?>
                           <form action="">
                             <div class="form-group sub">
                                 <span>Subscribe</span>
-                                <input class="switch right" type="checkbox" />
+                                <input class="switch right" type="checkbox" product-id="<?php echo the_ID(); ?>"/>
                             </div>
                           </form>
                       </div>
@@ -299,9 +296,12 @@ get_header(); ?>
                 <?php wp_reset_query(); ?>
                 </div>
               </div>
-              <div class="btn-wrapper text-center">
-                <a href="#" class="btn btn-yellow">Customize</a>
-              </div>
+            </div>
+          </div>
+          <div class="btn-wrapper text-center">
+            <a id="continueToCustomizeSubscription" href="#" class="btn btn-yellow">GO TO CART</a>
+            <div id="errorMessageSubscribe" class="alert alert-danger mt-5" role="alert" style="display: none;">
+              Please add products to card!
             </div>
           </div>
         </div>
