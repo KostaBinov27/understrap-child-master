@@ -52,156 +52,29 @@ get_header(); ?>
             </div>
           </nav>
         </div>
-        <div class="meals-section_bottom">
+        <div class="meals-section_bottom" id="oneTimeWrap">
           <div class="tab-content" id="nav-tabContent">
-            <div
-              class="tab-pane fade show active"
-              id="nav-breakfast"
-              role="tabpanel"
-              aria-labelledby="nav-breakfast-tab"
-            >
+            <div class="tab-pane fade show active" id="nav-breakfast" role="tabpanel" aria-labelledby="nav-breakfast-tab">
               <div class="meals-grid">
+              <?php
+              $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'breakfast' );
+              $loop = new WP_Query( $args );
+              while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
                 <div class="meal-item">
                   <div class="img-wrapper">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
+                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" />
                   </div>
                   <div class="content-wrapper">
-                    <a href="#"
-                      ><h3 class="meal-title">
-                        Teryiaki Chicken With Brown Rice
-                      </h3></a
-                    >
-                    <p class="meal-desc">
-                      Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical Latin
-                      literature from 45 BC.<span class="meal-price"
-                        >$9.95</span
-                      >
-                    </p>
+                    <a href="<?php echo get_permalink(); ?>"><h3 class="meal-title"> <?php the_title(); ?></h3></a>
+                    <p class="meal-desc"><?php the_excerpt(); ?><span class="meal-price"><?php echo $product->get_regular_price(); ?></span></p>
                     <ul class="alergens">
                       <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
                       <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
                     </ul>
                   </div>
                 </div>
-                <div class="meal-item">
-                  <div class="img-wrapper">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
-                  </div>
-                  <div class="content-wrapper">
-                    <a href="#"
-                      ><h3 class="meal-title">
-                        Teryiaki Chicken With Brown Rice
-                      </h3></a
-                    >
-                    <p class="meal-desc">
-                      Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical Latin
-                      literature from 45 BC.<span class="meal-price"
-                        >$9.95</span
-                      >
-                    </p>
-                    <ul class="alergens">
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="meal-item">
-                  <div class="img-wrapper">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
-                  </div>
-                  <div class="content-wrapper">
-                    <a href="#"
-                      ><h3 class="meal-title">
-                        Teryiaki Chicken With Brown Rice
-                      </h3></a
-                    >
-                    <p class="meal-desc">
-                      Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical Latin
-                      literature from 45 BC.<span class="meal-price"
-                        >$9.95</span
-                      >
-                    </p>
-                    <ul class="alergens">
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="meal-item">
-                  <div class="img-wrapper">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
-                  </div>
-                  <div class="content-wrapper">
-                    <a href="#"
-                      ><h3 class="meal-title">
-                        Teryiaki Chicken With Brown Rice
-                      </h3></a
-                    >
-                    <p class="meal-desc">
-                      Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical Latin
-                      literature from 45 BC.<span class="meal-price"
-                        >$9.95</span
-                      >
-                    </p>
-                    <ul class="alergens">
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="meal-item">
-                  <div class="img-wrapper">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
-                  </div>
-                  <div class="content-wrapper">
-                    <a href="#"
-                      ><h3 class="meal-title">
-                        Teryiaki Chicken With Brown Rice
-                      </h3></a
-                    >
-                    <p class="meal-desc">
-                      Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical Latin
-                      literature from 45 BC.<span class="meal-price"
-                        >$9.95</span
-                      >
-                    </p>
-                    <ul class="alergens">
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="meal-item">
-                  <div class="img-wrapper">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-11.png" alt="meal-img" />
-                  </div>
-                  <div class="content-wrapper">
-                    <a href="#"
-                      ><h3 class="meal-title">
-                        Teryiaki Chicken With Brown Rice
-                      </h3></a
-                    >
-                    <p class="meal-desc">
-                      Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical Latin
-                      literature from 45 BC.<span class="meal-price"
-                        >$9.95</span
-                      >
-                    </p>
-                    <ul class="alergens">
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="btn-wrapper text-center">
-                <a href="#" class="btn btn-yellow">Customize</a>
+              <?php endwhile; ?>
+              <?php wp_reset_query(); ?>
               </div>
             </div>
             <div
@@ -210,156 +83,175 @@ get_header(); ?>
               role="tabpanel"
               aria-labelledby="nav-lunch-tab"
             >
-              <div class="filter-buttons">
-                <button class="btn btn-filter">Beef</button>
-                <button class="btn btn-filter">Chicken</button>
-                <button class="btn btn-filter">Turkey</button>
-                <button class="btn btn-filter">Fish</button>
-                <button class="btn btn-filter">Vegeterian</button>
+              <div class="filter-buttons" id="secondFilterButtons-Onetime">
+                <button class="btn btn-filter active" id="beef" aria-to-show="beefWrap">Beef</button>
+                <button class="btn btn-filter" id="chicken" aria-to-show="chickenWrap">Chicken</button>
+                <button class="btn btn-filter" id="turkey" aria-to-show="turkeyWrap">Turkey</button>
+                <button class="btn btn-filter" id="fish" aria-to-show="fishWrap">Fish</button>
+                <button class="btn btn-filter" id="vege" aria-to-show="vegeWrap">Vegeterian</button>
               </div>
-              <div class="meals-grid">
-                <div class="meal-item">
-                  <div class="img-wrapper">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-22.png" alt="meal-img" />
-                  </div>
-                  <div class="content-wrapper">
-                    <a href="#"
-                      ><h3 class="meal-title">
-                        Teryiaki Chicken With Brown Rice
-                      </h3></a
-                    >
-                    <p class="meal-desc">
-                      Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical Latin
-                      literature from 45 BC.<span class="meal-price"
-                        >$9.95</span
+
+              <div id="beefWrap">
+                <div class="meals-grid">
+                <?php
+                $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'beef' );
+                $loop = new WP_Query( $args );
+                while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+                  <div class="meal-item">
+                    <div class="img-wrapper">
+                      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" />
+                    </div>
+                    <div class="content-wrapper">
+                      <a href="<?php echo get_permalink(); ?>"
+                        ><h3 class="meal-title">
+                          <?php the_title(); ?>
+                        </h3></a
                       >
-                    </p>
-                    <ul class="alergens">
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                    </ul>
+                      <p class="meal-desc">
+                      <?php the_excerpt(); ?><span class="meal-price"
+                          ><?php echo $product->get_regular_price(); ?></span
+                        >
+                      </p>
+                      <ul class="alergens">
+                        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
+                        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-                <div class="meal-item">
-                  <div class="img-wrapper">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-22.png" alt="meal-img" />
-                  </div>
-                  <div class="content-wrapper">
-                    <a href="#"
-                      ><h3 class="meal-title">
-                        Teryiaki Chicken With Brown Rice
-                      </h3></a
-                    >
-                    <p class="meal-desc">
-                      Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical Latin
-                      literature from 45 BC.<span class="meal-price"
-                        >$9.95</span
-                      >
-                    </p>
-                    <ul class="alergens">
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="meal-item">
-                  <div class="img-wrapper">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-22.png" alt="meal-img" />
-                  </div>
-                  <div class="content-wrapper">
-                    <a href="#"
-                      ><h3 class="meal-title">
-                        Teryiaki Chicken With Brown Rice
-                      </h3></a
-                    >
-                    <p class="meal-desc">
-                      Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical Latin
-                      literature from 45 BC.<span class="meal-price"
-                        >$9.95</span
-                      >
-                    </p>
-                    <ul class="alergens">
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="meal-item">
-                  <div class="img-wrapper">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-22.png" alt="meal-img" />
-                  </div>
-                  <div class="content-wrapper">
-                    <a href="#"
-                      ><h3 class="meal-title">
-                        Teryiaki Chicken With Brown Rice
-                      </h3></a
-                    >
-                    <p class="meal-desc">
-                      Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical Latin
-                      literature from 45 BC.<span class="meal-price"
-                        >$9.95</span
-                      >
-                    </p>
-                    <ul class="alergens">
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="meal-item">
-                  <div class="img-wrapper">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-22.png" alt="meal-img" />
-                  </div>
-                  <div class="content-wrapper">
-                    <a href="#"
-                      ><h3 class="meal-title">
-                        Teryiaki Chicken With Brown Rice
-                      </h3></a
-                    >
-                    <p class="meal-desc">
-                      Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical Latin
-                      literature from 45 BC.<span class="meal-price"
-                        >$9.95</span
-                      >
-                    </p>
-                    <ul class="alergens">
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="meal-item">
-                  <div class="img-wrapper">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-22.png" alt="meal-img" />
-                  </div>
-                  <div class="content-wrapper">
-                    <a href="#"
-                      ><h3 class="meal-title">
-                        Teryiaki Chicken With Brown Rice
-                      </h3></a
-                    >
-                    <p class="meal-desc">
-                      Contrary to popular belief, Lorem Ipsum is not simply
-                      random text. It has roots in a piece of classical Latin
-                      literature from 45 BC.<span class="meal-price"
-                        >$9.95</span
-                      >
-                    </p>
-                    <ul class="alergens">
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
-                      <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
-                    </ul>
-                  </div>
+                <?php endwhile; ?>
+                <?php wp_reset_query(); ?>
                 </div>
               </div>
-              <div class="btn-wrapper text-center">
-                <a href="#" class="btn btn-yellow">Customize</a>
+              <div id="chickenWrap" style="display: none;">
+                <div class="meals-grid">
+                <?php
+                $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'chicken' );
+                $loop = new WP_Query( $args );
+                while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+                  <div class="meal-item">
+                    <div class="img-wrapper">
+                      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" />
+                    </div>
+                    <div class="content-wrapper">
+                      <a href="<?php echo get_permalink(); ?>"
+                        ><h3 class="meal-title">
+                          <?php the_title(); ?>
+                        </h3></a
+                      >
+                      <p class="meal-desc">
+                      <?php the_excerpt(); ?><span class="meal-price"
+                          ><?php echo $product->get_regular_price(); ?></span
+                        >
+                      </p>
+                      <ul class="alergens">
+                        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
+                        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
+                      </ul>
+                    </div>
+                  </div>
+                <?php endwhile; ?>
+                <?php wp_reset_query(); ?>
+                </div>
               </div>
+              <div id="turkeyWrap" style="display: none;">
+                <div class="meals-grid">
+                <?php
+                $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'turkey' );
+                $loop = new WP_Query( $args );
+                while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+                  <div class="meal-item">
+                    <div class="img-wrapper">
+                      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" />
+                    </div>
+                    <div class="content-wrapper">
+                      <a href="<?php echo get_permalink(); ?>"
+                        ><h3 class="meal-title">
+                          <?php the_title(); ?>
+                        </h3></a
+                      >
+                      <p class="meal-desc">
+                      <?php the_excerpt(); ?><span class="meal-price"
+                          ><?php echo $product->get_regular_price(); ?></span
+                        >
+                      </p>
+                      <ul class="alergens">
+                        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
+                        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
+                      </ul>
+                    </div>
+                  </div>
+                <?php endwhile; ?>
+                <?php wp_reset_query(); ?>
+                </div>
+              </div>
+              <div id="fishWrap" style="display: none;">
+                <div class="meals-grid">
+                <?php
+                $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'fish' );
+                $loop = new WP_Query( $args );
+                while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+                  <div class="meal-item">
+                    <div class="img-wrapper">
+                      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" />
+                    </div>
+                    <div class="content-wrapper">
+                      <a href="<?php echo get_permalink(); ?>"
+                        ><h3 class="meal-title">
+                          <?php the_title(); ?>
+                        </h3></a
+                      >
+                      <p class="meal-desc">
+                      <?php the_excerpt(); ?><span class="meal-price"
+                          ><?php echo $product->get_regular_price(); ?></span
+                        >
+                      </p>
+                      <ul class="alergens">
+                        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
+                        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
+                      </ul>
+                    </div>
+                  </div>
+                <?php endwhile; ?>
+                <?php wp_reset_query(); ?>
+                </div>
+              </div>
+              <div id="vegeWrap" style="display: none;">
+                <div class="meals-grid">
+                <?php
+                $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => 'meatless' );
+                $loop = new WP_Query( $args );
+                while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+                  <div class="meal-item">
+                    <div class="img-wrapper">
+                      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" />
+                    </div>
+                    <div class="content-wrapper">
+                      <a href="<?php echo get_permalink(); ?>"
+                        ><h3 class="meal-title">
+                          <?php the_title(); ?>
+                        </h3></a
+                      >
+                      <p class="meal-desc">
+                      <?php the_excerpt(); ?><span class="meal-price"
+                          ><?php echo $product->get_regular_price(); ?></span
+                        >
+                      </p>
+                      <ul class="alergens">
+                        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
+                        <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
+                      </ul>
+                    </div>
+                  </div>
+                <?php endwhile; ?>
+                <?php wp_reset_query(); ?>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-wrapper text-center">
+            <!-- <a id="continueToCustomizeOneTime" class="btn btn-yellow">GO TO CART</a> -->
+            <div id="errorMessageOnetime" class="alert alert-danger mt-5" role="alert" style="display: none;">
+              Please add quantity on selected products!
             </div>
           </div>
         </div>
@@ -378,7 +270,7 @@ get_header(); ?>
             ingredients. Add extras. Whatever you want. If you don’t see the
             option, leave us a note and we’ll do what we can to accomodate you.
           </h4>
-          <a href="#" class="btn btn-pink">GET STARTED</a>
+          <a id="getStartedPopup" data-toggle="modal" data-target="#exampleModal" class="btn btn-pink">GET STARTED</a>
         </div>
       </div>
     </section>

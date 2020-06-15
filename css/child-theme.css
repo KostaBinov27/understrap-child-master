@@ -13354,6 +13354,36 @@ input.switch:disabled::after {
   cursor: not-allowed; }
 
 /* End Swich*/
+.btn-yellow-customize {
+  padding: 15px 26px;
+  font-size: 11px; }
+
+.woocommerce div.product form.cart div.quantity {
+  float: inherit; }
+
+.single-product .acarta .quantity {
+  float: inherit;
+  position: absolute;
+  left: 127px; }
+
+.single-product .acarta {
+  display: block !important;
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  position: inherit !important;
+  width: inherit !important; }
+
+.product-addon {
+  width: 50%;
+  display: inline-block; }
+
+.single-product .acarta .quantity {
+  float: unset;
+  position: relative !important;
+  right: -128px;
+  top: 62px; }
+
 .flex-section {
   padding: 6rem 0;
   position: relative; }

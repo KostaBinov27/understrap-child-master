@@ -78,7 +78,11 @@ get_header(); ?>
                           <input min="1" type="number" value="1" class="<?php echo the_ID(); ?>"/>
                         </div>
                         <div class="form-group">
-                          <a id="continueToCustomizeOneTime" class="btn btn-yellow">GO TO CART</a>
+                          <span>Add to cart</span>
+                          <input class="switch right" type="checkbox" product-id="<?php echo the_ID(); ?>"/>
+                        </div>
+                        <div class="form-group">
+                          <a href="<?php echo get_permalink(); ?>" class="btn btn-yellow btn-yellow-customize">CUSTOMIZE</a>
                         </div>
                       </form>
                     </div>
@@ -304,10 +308,6 @@ get_header(); ?>
                           <div class="form-group">
                             <span>Quantity</span>
                             <input min="1" type="number" value="1" class="<?php echo the_ID(); ?>"/>
-                          </div>
-                          <div class="form-group">
-                            <span>Add to cart</span>
-                            <input class="switch right" type="checkbox" product-id="<?php echo the_ID(); ?>"/>
                           </div>
                           <div class="form-group">
                             <span>Add to cart</span>

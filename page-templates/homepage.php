@@ -88,7 +88,7 @@ get_header(); ?>
             </div>
           </a>
         </div>
-        <a href="#" class="btn">Our meals</a>
+        <a href="<?php echo get_site_url(); ?>/our-meals/" class="btn">Our meals</a>
       </div>
     </section>
 
@@ -121,7 +121,7 @@ get_header(); ?>
               lifestyle. Switch ingredients in or out. Order one-off packages or
               save on subscriptions. Whatever you want. It’s up to you.
             </p>
-            <a href="#" class="btn btn-pink">How it works</a>
+            <a href="<?php echo get_site_url(); ?>/how-it-works/" class="btn btn-pink">How it works</a>
           </div>
         </div>
       </div>
@@ -152,7 +152,7 @@ get_header(); ?>
           <h3>
             We already deliver to your area. So, what are you waiting for?
           </h3>
-          <a href="#" class="btn btn-pink">Get started</a>
+          <a id="getStartedPopup" data-toggle="modal" data-target="#exampleModal" class="btn btn-pink">Get started</a>
         </div>
       </div>
       <span class="img-deco-left">

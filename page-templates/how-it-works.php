@@ -156,7 +156,7 @@ get_header(); ?>
           <h3>
             We already deliver to your area. So, what are you waiting for?
           </h3>
-          <a href="#" class="btn btn-pink">Get started</a>
+          <a id="getStartedPopup" data-toggle="modal" data-target="#exampleModal" class="btn btn-pink">Get started</a>
         </div>
       </div>
       <span class="img-deco-left">

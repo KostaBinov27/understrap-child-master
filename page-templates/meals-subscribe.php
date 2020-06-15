@@ -299,7 +299,7 @@ get_header(); ?>
             </div>
           </div>
           <div class="btn-wrapper text-center">
-            <a id="continueToCustomizeSubscription" href="#" class="btn btn-yellow">GO TO CART</a>
+            <a id="continueToCustomizeSubscription" class="btn btn-yellow">GO TO CART</a>
             <div id="errorMessageSubscribe" class="alert alert-danger mt-5" role="alert" style="display: none;">
               Please add products to card!
             </div>
