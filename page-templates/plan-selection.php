@@ -61,7 +61,7 @@ get_header(); ?>
                     <p class="meal-price">Total: <span id="mealsCount">3</span> Meals</p>
                     <p class="meal-price">Total: <span id="mealsPriceTotal">27</span>$</p>
                 </div>
-                <button class="btn btn-pink" id="choosePlansContinue">Choose your plans</button>
+                <button class="btn btn-pink" disabled id="choosePlansContinue">Choose your plans</button>
                 <button class="btn btn-pink m-auto" disabled id="spinerBtn" style="display:none;"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></button>
             </div>
         </div>

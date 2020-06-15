@@ -90,6 +90,11 @@ jQuery(document).ready(function () {
     
     jQuery("#mealsPriceTotal").empty();
     jQuery("#mealsPriceTotal").append(sumPrice);
+    if (sum >= 10){
+      jQuery("#choosePlansContinue").prop("disabled", false);
+    } else {
+      jQuery("#choosePlansContinue").prop("disabled", true);
+    }
   });
 
   jQuery( rangeSliderMeat ).mouseup(function() {
@@ -114,6 +119,11 @@ jQuery(document).ready(function () {
     
     jQuery("#mealsPriceTotal").empty();
     jQuery("#mealsPriceTotal").append(sumPrice);
+    if (sum >= 10){
+      jQuery("#choosePlansContinue").prop("disabled", false);
+    } else {
+      jQuery("#choosePlansContinue").prop("disabled", true);
+    }
   });
 
   jQuery( rangeSliderVege ).mouseup(function() {
@@ -138,6 +148,12 @@ jQuery(document).ready(function () {
     
     jQuery("#mealsPriceTotal").empty();
     jQuery("#mealsPriceTotal").append(sumPrice);
+
+    if (sum >= 10){
+      jQuery("#choosePlansContinue").prop("disabled", false);
+    } else {
+      jQuery("#choosePlansContinue").prop("disabled", true);
+    }
   });
 
   jQuery( "#choosePlansContinue" ).click(function() {
