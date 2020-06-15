@@ -13,6 +13,38 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
 
+<?php
+
+if (isset($_POST['emailSubmit'])){
+  
+  $to = 'kostabinovps@gmail.com';
+  $subject = 'FitBites New Emal Subscription';
+  $body = 'Email Address: '.$_POST['emailAddress'];
+  $headers = array('Content-Type: text/html; charset=UTF-8');
+  
+  $emailSent = wp_mail( $to, $subject, $body, $headers );
+}
+
+$flag = -1;
+if (isset($_POST['zipLookUp'])){
+  $numberToLook = $_POST['zipCodeNum'];
+  $shipping_zones = WC_Shipping_Zones::get_zones();
+  $codes = '';
+  $codesarr = [];
+  
+  foreach($shipping_zones as $zone){
+    foreach ($zone['zone_locations'] as $singleLocation) {
+      $codes = $codes.','.$singleLocation->code;
+      $codesarr = explode(',', $codes);
+    }
+  }
+  if(in_array($numberToLook, $codesarr)){
+    $flag = 1;
+  } else {
+    $flag = 0;
+  }
+} ?>
+
     <section class="hero-section">
       <div class="img-wrapper">
         <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/hero-img.png" alt="hero-img" />
@@ -99,15 +131,15 @@ get_header(); ?>
             <div class="img-grid_inner">
               <div class="img-wrapper">
                 <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/customizer-1.png" alt="customizer-img" />
-                <a href="#" class="btn btn-pink btn-img">Choose</a>
+                <a href="<?php echo get_site_url(); ?>/our-meals/" class="btn btn-pink btn-img">Choose</a>
               </div>
               <div class="img-wrapper">
                 <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/customizer-2.png" alt="customizer-img" />
-                <a href="#" class="btn btn-turq btn-img">Customize</a>
+                <a href="<?php echo get_site_url(); ?>/meals-one-time/" class="btn btn-turq btn-img">Customize</a>
               </div>
               <div class="img-wrapper">
                 <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/customizer-3.png" alt="customizer-img" />
-                <a href="#" class="btn btn-yellow btn-img">Enjoy</a>
+                <a href="<?php echo get_site_url(); ?>/our-meals/" class="btn btn-yellow btn-img">Enjoy</a>
               </div>
             </div>
           </div>
@@ -127,7 +159,7 @@ get_header(); ?>
       </div>
     </section>
 
-    <section class="delivery-section">
+    <section id="zipCodesLookUp" class="delivery-section">
       <div class="wrapper-small">
         <div class="delivery-section_inner">
           <h2 class="text-white">Do we deliver?</h2>
@@ -136,9 +168,20 @@ get_header(); ?>
             below to see if we are delivering in your area yet.
           </p>
           <div class="zip-form">
-            <form action="">
-              <input type="number" placeholder="Enter zip code" />
-              <button type="submit" class="btn btn-white-t">Look up</button>
+            <?php if ($flag == 1){ ?>
+              <div class="alert alert-success" role="alert">
+                There is delivery for this location!
+              </div>
+            <?php
+            } else if ($flag == 0) { ?>
+            <div class="alert alert-danger" role="alert">
+              There is no delivery for this location!
+            </div>
+            <?php
+            } ?>
+            <form action="#zipCodesLookUp" method="post">
+              <input type="number" name="zipCodeNum" placeholder="Enter zip code" />
+              <button type="submit" name="zipLookUp" class="btn btn-white-t">Look up</button>
             </form>
           </div>
         </div>
@@ -167,7 +210,7 @@ get_header(); ?>
       <div class="bg-wrapper">
         <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/newsletter-bg.png" alt="section-bg" />
       </div>
-      <div class="wrapper">
+      <div id="emailForm" class="wrapper">
         <div class="newsletter-section_inner">
           <h2>
             Fresh Deals Right to Your Inbox
@@ -176,8 +219,19 @@ get_header(); ?>
             Join our mailing list to stay up to date with our new menu item
           </h3>
           <div class="form-wrapper">
-            <input type="email" placeholder="email" />
-            <button type="submit" class="btn btn-turq">Submit</button>
+            <?php if ($emailSent){ ?>
+              <div class="alert alert-success" role="alert">
+                Successfully sent!
+              </div>
+            <?php
+            } else { ?>
+              <form method="post" action="#emailForm">
+                <input type="email" placeholder="email" name="emailAddress" />
+                <button type="submit" name="emailSubmit" class="btn btn-turq">Submit</button>
+              </form>
+            <?php
+            } ?>
+            
           </div>
         </div>
       </div>

@@ -19,7 +19,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( $related_products ) : ?>
+if ( $related_products ) : 
+
+$count = 0; ?>
 
 	<section class="related products">
 
@@ -36,11 +38,14 @@ if ( $related_products ) : ?>
 			<?php foreach ( $related_products as $related_product ) : ?>
 
 					<?php
-					$post_object = get_post( $related_product->get_id() );
+					if ($count < 3) {
+						$post_object = get_post( $related_product->get_id() );
 
-					setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
+						setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
 
-					wc_get_template_part( 'content', 'product' );
+						wc_get_template_part( 'content', 'product' );
+						$count ++;
+					}
 					?>
 
 			<?php endforeach; ?>

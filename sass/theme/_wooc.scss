@@ -5,6 +5,9 @@
     }
 }
 .page-id-31{
+    .woocommerce-message{
+        display: none;
+    }
     overflow-x: hidden;
     .btn{
         &.btn-outline-primary{
@@ -244,4 +247,14 @@
             }
         }
     }
+}
+
+.woocommerce-info{
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#calc_shipping_state_field span{
+    width: 100% !important;
 }

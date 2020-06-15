@@ -11,7 +11,37 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-get_header(); ?>
+get_header(); 
+
+if (isset($_POST['emailSubmit'])){
+  
+  $to = 'kostabinovps@gmail.com';
+  $subject = 'FitBites New Emal Subscription';
+  $body = 'Email Address: '.$_POST['emailAddress'];
+  $headers = array('Content-Type: text/html; charset=UTF-8');
+  
+  $emailSent = wp_mail( $to, $subject, $body, $headers );
+} 
+
+$flag = -1;
+if (isset($_POST['zipLookUp'])){
+  $numberToLook = $_POST['zipCodeNum'];
+  $shipping_zones = WC_Shipping_Zones::get_zones();
+  $codes = '';
+  $codesarr = [];
+  
+  foreach($shipping_zones as $zone){
+    foreach ($zone['zone_locations'] as $singleLocation) {
+      $codes = $codes.','.$singleLocation->code;
+      $codesarr = explode(',', $codes);
+    }
+  }
+  if(in_array($numberToLook, $codesarr)){
+    $flag = 1;
+  } else {
+    $flag = 0;
+  }
+} ?>
 
     <section class="banner-section">
       <div class="banner-bg">
@@ -39,37 +69,37 @@ get_header(); ?>
               </h4>
             </div>
             <div class="img-wrapper">
-              <a href="#" class="img-link">
+              <a class="img-link">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/beef-top.png" alt="meal-selection" />
               </a>
-              <a href="#" class="img-link">
+              <a class="img-link">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/chicken-top.png" alt="meal-selection" />
               </a>
             </div>
           </div>
           <div class="flex-section_inner_bottom">
             <div class="img-wrapper">
-              <a href="#" class="img-link">
+              <a class="img-link">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/turkey-top.png" alt="meal-selection" />
               </a>
-              <a href="#" class="img-link">
+              <a class="img-link">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/fish-top.png" alt="meal-selection" />
               </a>
-              <a href="#" class="img-link">
+              <a class="img-link">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/vege-top.png" alt="meal-selection" />
               </a>
             </div>
             <div class="img-wrapper-res">
-              <a href="#" class="img-link">
+              <a class="img-link">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/beef-top.png" alt="meal-selection" />
               </a>
-              <a href="#" class="img-link">
+              <a class="img-link">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/chicken-top.png" alt="meal-selection" />
               </a>
-              <a href="#" class="img-link no-laptop">
+              <a class="img-link no-laptop">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/turkey-top.png" alt="meal-selection" />
               </a>
-              <a href="#" class="img-link no-laptop">
+              <a class="img-link no-laptop">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/fish-top.png" alt="meal-selection" />
               </a>
               <a href="#" class="img-link no-laptop">
@@ -121,7 +151,7 @@ get_header(); ?>
       </div>
     </section>
 
-    <section class="time-to-eat-section">
+    <section id="zipCodesLookUp" class="time-to-eat-section">
       <div class="wrapper-small">
         <div class="time-to-eat-section_inner">
           <div class="time-to-eat-section_inner_left">
@@ -132,10 +162,21 @@ get_header(); ?>
               delivering in your area yet.
             </h4>
             <div class="form-wrapper">
-              <form action="">
+              <?php if ($flag == 1){ ?>
+                <div class="alert alert-success" role="alert">
+                  There is delivery for this location!
+                </div>
+              <?php
+              } else if ($flag == 0) { ?>
+              <div class="alert alert-danger" role="alert">
+                There is no delivery for this location!
+              </div>
+              <?php
+              } ?>
+              <form action="#zipCodesLookUp" method="post">
                 <div class="form-group">
-                  <input type="text" placeholder="ZIP CODE" />
-                  <button class="btn btn-pink">Look up</button>
+                  <input name="zipCodeNum" type="text" placeholder="ZIP CODE" />
+                  <button type="submit" name="zipLookUp" class="btn btn-pink">Look up</button>
                 </div>
               </form>
             </div>
@@ -178,12 +219,22 @@ get_header(); ?>
             Stay up to date with our latest products and locations
           </h4>
           <div class="form-wrapper">
-            <form action="">
-              <div class="form-group">
-                <input type="email" placeholder="your email address" />
-                <button class="btn btn-turq">subscribe</button>
+            <?php if ($emailSent){ ?>
+              <div class="alert alert-success" role="alert">
+                Successfully sent!
               </div>
-            </form>
+            <?php
+            } else { ?>
+              <form method="post" action="#emailForm">
+                <div class="form-group">
+                  <input type="email" name="emailAddress" placeholder="your email address" />
+                  <button name="emailSubmit" type="submit" class="btn btn-turq">subscribe</button>
+                </div>
+              </form>
+            <?php
+            }
+            ?>
+            
           </div>
         </div>
       </div>

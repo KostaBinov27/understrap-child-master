@@ -47,20 +47,20 @@ $container = get_theme_mod( 'understrap_container_type' );
           <div class="footer-group">
             <p class="text-turq ul-heading">Sitemap:</p>
             <ul class="footer-ul uppercase">
-              <li><a href="#">Plans</a></li>
-              <li><a href="#">Our meals</a></li>
-              <li><a href="#">How it works</a></li>
-              <li><a href="#">Contact us</a></li>
-              <li><a href="#">Fitbites grill</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/plan-selection/">Plans</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/our-meals/">Our meals</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/how-it-works/">How it works</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/contact/">Contact us</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/">Fitbites grill</a></li> 
             </ul>
           </div>
           <div class="footer-group">
-            <a href="#" class="btn btn-pink">Call cypress</a>
-            <a href="#" class="btn btn-pink">Call fountain valley</a>
+            <a href="<?php echo get_site_url(); ?>/contact/#mapsSection" class="btn btn-pink">Call cypress</a>
+            <a href="<?php echo get_site_url(); ?>/contact/#mapsSection" class="btn btn-pink">Call fountain valley</a>
           </div>
           <div class="footer-group">
-            <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/fb.svg" alt="fb-icon" /></a>
-            <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/insta.svg" alt="instagram-icon" /></a>
+            <a href="https://www.facebook.com/fitbitesgrill"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/fb.svg" alt="fb-icon" /></a>
+            <a href="https://www.instagram.com/fitbitesmealprep/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/insta.svg" alt="instagram-icon" /></a>
           </div>
         </div>
         <a href="#" class="footer-logo-wrapper mobile-logo d-block d-lg-none">
@@ -92,20 +92,20 @@ $container = get_theme_mod( 'understrap_container_type' );
           <div class="footer-group">
             <p class="text-turq ul-heading">Sitemap:</p>
             <ul class="footer-ul uppercase">
-              <li><a href="#">Plans</a></li>
-              <li><a href="#">Our meals</a></li>
-              <li><a href="#">How it works</a></li>
-              <li><a href="#">Contact us</a></li>
-              <li><a href="#">Fitbites grill</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/plan-selection/">Plans</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/our-meals/">Our meals</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/how-it-works/">How it works</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/contact/">Contact us</a></li>
+              <li><a href="<?php echo get_site_url(); ?>/">Fitbites grill</a></li> 
             </ul>
           </div>
           <div class="footer-group">
-            <a href="#" class="btn btn-pink">Call cypress</a>
-            <a href="#" class="btn btn-pink">Call fountain valley</a>
+            <a href="<?php echo get_site_url(); ?>/contact/#mapsSection" class="btn btn-pink">Call cypress</a>
+            <a href="<?php echo get_site_url(); ?>/contact/#mapsSection" class="btn btn-pink">Call fountain valley</a>
           </div>
           <div class="footer-group d-none">
-            <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/fb.svg" alt="fb-icon" /></a>
-            <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/insta.svg" alt="instagram-icon" /></a>
+            <a href="https://www.facebook.com/fitbitesgrill"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/fb.svg" alt="fb-icon" /></a>
+            <a href="https://www.instagram.com/fitbitesmealprep/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/insta.svg" alt="instagram-icon" /></a>
           </div>
         </div>
       </div>

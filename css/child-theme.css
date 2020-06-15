@@ -13384,6 +13384,10 @@ input.switch:disabled::after {
   right: -128px;
   top: 62px; }
 
+.btn-yellow-spin {
+  background-color: #fcd70d;
+  color: #fff; }
+
 .flex-section {
   padding: 6rem 0;
   position: relative; }
@@ -13677,6 +13681,8 @@ input.switch:disabled::after {
 
 .page-id-31 {
   overflow-x: hidden; }
+  .page-id-31 .woocommerce-message {
+    display: none; }
   .page-id-31 .btn.btn-outline-primary,
   .page-id-31 .wpcf7 input[type=submit], .wpcf7 .page-id-31 input[type=submit] {
     display: inline-block;
@@ -13892,6 +13898,14 @@ input.switch:disabled::after {
       width: 100%;
       -o-object-fit: cover;
          object-fit: cover; }
+
+.woocommerce-info {
+  width: 60%;
+  margin: auto;
+  margin-top: 30px; }
+
+#calc_shipping_state_field span {
+  width: 100% !important; }
 
 .meal-customization {
   padding: 6rem 0; }

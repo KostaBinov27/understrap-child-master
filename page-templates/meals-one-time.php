@@ -11,7 +11,17 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-get_header(); ?>
+get_header(); 
+
+if (isset($_POST['emailSubmit'])){
+  
+  $to = 'kostabinovps@gmail.com';
+  $subject = 'FitBites New Emal Subscription';
+  $body = 'Email Address: '.$_POST['emailAddress'];
+  $headers = array('Content-Type: text/html; charset=UTF-8');
+  
+  $emailSent = wp_mail( $to, $subject, $body, $headers );
+}?>
 
     <section class="banner-section">
       <div class="banner-bg">
@@ -325,6 +335,7 @@ get_header(); ?>
           </div>
           <div class="btn-wrapper text-center">
             <a id="continueToCustomizeOneTime" class="btn btn-yellow">GO TO CART</a>
+            <button class="btn btn-yellow-spin m-auto btn-yellow" id="spinerBtn" style="display:none;"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></button>
             <div id="errorMessageOnetime" class="alert alert-danger mt-5" role="alert" style="display: none;">
               Please add quantity on selected products!
             </div>
@@ -361,12 +372,20 @@ get_header(); ?>
             Stay up to date with our latest products and locations
           </h4>
           <div class="form-wrapper">
-            <form action="">
-              <div class="form-group">
-                <input type="email" placeholder="your email address" />
-                <button class="btn btn-turq">subscribe</button>
+            <?php if ($emailSent){ ?>
+              <div class="alert alert-success" role="alert">
+                Successfully sent!
               </div>
-            </form>
+            <?php
+            } else { ?>
+              <form method="post" action="#emailForm">
+                <div class="form-group">
+                  <input type="email" name="emailAddress" placeholder="your email address" />
+                  <button class="btn btn-turq" name="emailSubmit">subscribe</button>
+                </div>
+              </form>
+            <?php 
+            } ?>
           </div>
         </div>
       </div>

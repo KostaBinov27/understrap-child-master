@@ -11,7 +11,16 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-get_header(); ?>
+get_header(); 
+if (isset($_POST['emailSubmit'])){
+  
+  $to = 'kostabinovps@gmail.com';
+  $subject = 'FitBites New Emal Subscription';
+  $body = 'Email Address: '.$_POST['emailAddress'];
+  $headers = array('Content-Type: text/html; charset=UTF-8');
+  
+  $emailSent = wp_mail( $to, $subject, $body, $headers );
+} ?>
 
 <section class="banner-section">
       <div class="banner-bg">
@@ -286,10 +295,10 @@ get_header(); ?>
             Stay up to date with our latest products and locations
           </h4>
           <div class="form-wrapper">
-            <form action="">
+            <form method="post" action="#emailForm">
               <div class="form-group">
-                <input type="email" placeholder="your email address" />
-                <button class="btn btn-turq">subscribe</button>
+                <input type="email" name="emailAddress" placeholder="your email address" />
+                <button class="btn btn-turq"  name="emailSubmit" type="submit">subscribe</button>
               </div>
             </form>
           </div>

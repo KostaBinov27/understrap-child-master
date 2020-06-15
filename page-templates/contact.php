@@ -11,7 +11,16 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-get_header(); ?>
+get_header(); 
+if (isset($_POST['emailSubmit'])){
+  
+    $to = 'kostabinovps@gmail.com';
+    $subject = 'FitBites New Emal Subscription';
+    $body = 'Name: '.$_POST['nameContact'].'<br> Emal: '.$_POST['emailContact'].'<br> Message: <br>'.$_POST['contactFormText'];
+    $headers = array('Content-Type: text/html; charset=UTF-8');
+    
+    $emailSent = wp_mail( $to, $subject, $body, $headers );
+  } ?>
 
 <section class="banner-section banner-hero">
       <div class="banner-bg">
@@ -24,27 +33,35 @@ get_header(); ?>
         </div>
       </div>
   </section>
-  <section class="get-in-touch-section">
+  <section id="emailForm" class="get-in-touch-section">
     <div class="wrapper-small">
         <div class="get-in-touch-section_inner">
             <h2 class="text-uppercase">Get in touch</h2>
             <h3 class="text-uppercase meal-title">Need help with your order? questions? compliments?</h3>
             <p>We love to hear from our customers. Feel free to send us a message below and we’ll do our best to get back to you within 48 hours.</p>
             <div class="form-wrapper">
-                <form action="">
-                    <div class="form-group">
-                        <input type="text" placeholder="Name" name="name">
+                <?php if ($emailSent){ ?>
+                    <div class="alert alert-success" role="alert">
+                    Successfully sent!
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="email" name="email">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" cols="30" rows="10"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-turq">Submit</button>
-                    </div>
-                </form>
+                <?php
+                } else { ?>
+                    <form method="post" action="#emailForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" name="nameContact">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="email" name="emailContact">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" cols="30" name="contactFormText" rows="10"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" name="emailSubmit" class="btn btn-turq">Submit</button>
+                        </div>
+                    </form>
+                <?php 
+                } ?>
             </div>
         </div>
     </div>
@@ -58,7 +75,7 @@ get_header(); ?>
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/bg-pink.png" alt="bg-img">
     </div>
   </section>
-  <section class="locations-section">
+  <section id="mapsSection" class="locations-section">
       <div class="wrapper">
           <h2 class="h1 text-black">Visit us</h2>
           <h3 class="text-turq text-uppercase meal-title">Our locations</h3>

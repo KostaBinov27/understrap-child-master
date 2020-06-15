@@ -15,10 +15,18 @@ var del = require( 'del' );
 var cleanCSS = require( 'gulp-clean-css' );
 var replace = require( 'gulp-replace' );
 var autoprefixer = require( 'gulp-autoprefixer' );
+var imagemin = require('gulp-imagemin');
 
 // Configuration file to keep your code DRY
 var cfg = require( './gulpconfig.json' );
 var paths = cfg.paths;
+
+
+gulp.task( 'compress-images', function() {
+    return gulp.src('img/*')
+        .pipe(imagemin({ progressive: true }))
+        .pipe(gulp.dest('img'));
+ });
 
 // Run:
 // gulp sass

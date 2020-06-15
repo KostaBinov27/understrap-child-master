@@ -249,6 +249,8 @@ jQuery(document).ready(function () {
     } else {
       selected = selected.substr(1);
       jQuery.get(url+'?add-to-cart='+selected, function() {});
+      jQuery( "#continueToCustomizeOneTime" ).hide();
+      jQuery( "#spinerBtn" ).show();
       setTimeout(function(){ 
         window.location.href = document.location.origin+"/moolay/cart/";
       }, 3000);
