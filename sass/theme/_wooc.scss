@@ -258,3 +258,73 @@
 #calc_shipping_state_field span{
     width: 100% !important;
 }
+
+.page-id-35{
+    .content-area{
+        .post-35{
+            .entry-content{
+                .woocommerce{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .banner-section{
+                        flex: 100%;
+                        margin-bottom: 4rem;
+                    }
+                    .woocommerce-MyAccount-navigation{
+                        flex: 20%;
+                        margin-left: 17%;
+                        margin-right: 2%;
+                        .list-group-item{
+                            border: none;
+                            border-right: 1px solid rgba(0,0,0,.125);
+                            font-weight: 700;
+                        }
+                        @include for-tablet{
+                            flex: 100%;
+                            margin: 0;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                    .woocommerce-MyAccount-content{
+                        flex: 40%;
+                        margin-right: 20%;
+                        form{
+                            .form-row{
+                            margin-bottom: 1rem;
+                            }
+                        }
+                        @include for-tablet{
+                            flex: 100%;
+                            margin: 0;
+                            margin-bottom: 1rem;
+                            padding: 0 1rem;
+                        }
+                    }
+                    .woocommerce-info{
+                        width: 90%;
+                    }
+                    .woocommerce-form.woocommerce-form-login.login{
+                        margin: 0 auto;
+                        margin-top: 10rem;
+                    }
+                    .login{
+                        .woocommerce-form-row{
+                            input{
+                                border: 2px solid rgba(127, 127, 127, .3);
+                                background-color: #fff;
+                                border-radius: 40px;
+                                padding: 1rem 2rem;
+                                width: 100%;
+                                &:focus{
+                                    outline: none;
+                                    border: 2px solid rgba(127, 127, 127, .7);
+                                    background-color: #fdfdfd;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

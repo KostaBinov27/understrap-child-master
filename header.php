@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           <a class="nav-link d-none d-sm-inline-block d-lg-none" href="#">Our meals</a>
           <a
             class="nav-link btn btn-white d-none d-sm-inline d-lg-none btn-nav-res"
-            href="/moolay/"
+            id="getStartedPopup" data-toggle="modal" data-target="#exampleModal"
             >Get started</a
           >
           <button
@@ -132,7 +132,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div><!-- #wrapper-navbar end -->
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal home-modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-custom" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -145,13 +145,10 @@ $container = get_theme_mod( 'understrap_container_type' );
           <div class="text-center mb-5">
             <h3>Choose Your Plan</h3>
           </div>
-          <div class="row">
-            <div class="col-lg-5 m-auto text-center">
-              <a href="<?php echo get_site_url(); ?>/plan-selection/"><button type="button" class="btn btn-secondary-custom">WEEKLY</button></a>
-            </div>
-            <div class="col-lg-5 m-auto text-center">
+          <div class="button-wrapper">
+            <a href="<?php echo get_site_url(); ?>/plan-selection/"><button type="button" class="btn btn-secondary-custom">WEEKLY</button></a>
             <a href="<?php echo get_site_url(); ?>/meals-one-time/"><button type="button" class="btn btn-secondary-custom">ONE TIME</button></a>
-            </div>
+          </div>
           </div>
         </div>
       </div>

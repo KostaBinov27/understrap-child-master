@@ -486,6 +486,9 @@
           align-self: flex-start;
         }
       }
+      @include for-tablet{
+        width: auto;
+      }
       @include for-phone {
         width: 100%;
         padding: 40px 30px;

@@ -12766,6 +12766,9 @@ p {
         .newsletter-section_inner .form-wrapper button {
           -ms-flex-item-align: start;
               align-self: flex-start; } }
+    @media (max-width: 768px) {
+      .newsletter-section_inner .form-wrapper {
+        width: auto; } }
     @media (max-width: 575px) {
       .newsletter-section_inner .form-wrapper {
         width: 100%;
@@ -13907,6 +13910,65 @@ input.switch:disabled::after {
 #calc_shipping_state_field span {
   width: 100% !important; }
 
+.page-id-35 .content-area .post-35 .entry-content .woocommerce {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .page-id-35 .content-area .post-35 .entry-content .woocommerce .banner-section {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    margin-bottom: 4rem; }
+  .page-id-35 .content-area .post-35 .entry-content .woocommerce .woocommerce-MyAccount-navigation {
+    -webkit-box-flex: 20%;
+        -ms-flex: 20%;
+            flex: 20%;
+    margin-left: 17%;
+    margin-right: 2%; }
+    .page-id-35 .content-area .post-35 .entry-content .woocommerce .woocommerce-MyAccount-navigation .list-group-item {
+      border: none;
+      border-right: 1px solid rgba(0, 0, 0, 0.125);
+      font-weight: 700; }
+    @media (max-width: 768px) {
+      .page-id-35 .content-area .post-35 .entry-content .woocommerce .woocommerce-MyAccount-navigation {
+        -webkit-box-flex: 100%;
+            -ms-flex: 100%;
+                flex: 100%;
+        margin: 0;
+        margin-bottom: 1rem; } }
+  .page-id-35 .content-area .post-35 .entry-content .woocommerce .woocommerce-MyAccount-content {
+    -webkit-box-flex: 40%;
+        -ms-flex: 40%;
+            flex: 40%;
+    margin-right: 20%; }
+    .page-id-35 .content-area .post-35 .entry-content .woocommerce .woocommerce-MyAccount-content form .form-row {
+      margin-bottom: 1rem; }
+    @media (max-width: 768px) {
+      .page-id-35 .content-area .post-35 .entry-content .woocommerce .woocommerce-MyAccount-content {
+        -webkit-box-flex: 100%;
+            -ms-flex: 100%;
+                flex: 100%;
+        margin: 0;
+        margin-bottom: 1rem;
+        padding: 0 1rem; } }
+  .page-id-35 .content-area .post-35 .entry-content .woocommerce .woocommerce-info {
+    width: 90%; }
+  .page-id-35 .content-area .post-35 .entry-content .woocommerce .woocommerce-form.woocommerce-form-login.login {
+    margin: 0 auto;
+    margin-top: 10rem; }
+  .page-id-35 .content-area .post-35 .entry-content .woocommerce .login .woocommerce-form-row input {
+    border: 2px solid rgba(127, 127, 127, 0.3);
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 1rem 2rem;
+    width: 100%; }
+    .page-id-35 .content-area .post-35 .entry-content .woocommerce .login .woocommerce-form-row input:focus {
+      outline: none;
+      border: 2px solid rgba(127, 127, 127, 0.7);
+      background-color: #fdfdfd; }
+
 .meal-customization {
   padding: 6rem 0; }
   .meal-customization_inner .meals-grid {
@@ -14179,6 +14241,34 @@ input.switch:disabled::after {
   @media (max-width: 575px) {
     .modal .modal-body {
       padding: 1rem; } }
+
+.modal.home-modal .modal-body {
+  padding: 2rem 4rem; }
+  .modal.home-modal .modal-body .button-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    @media (max-width: 768px) {
+      .modal.home-modal .modal-body .button-wrapper a {
+        margin-bottom: 1rem; } }
+    @media (max-width: 768px) {
+      .modal.home-modal .modal-body .button-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+
+.modal.home-modal .modal-dialog-custom {
+  width: 500px !important; }
+  @media (max-width: 768px) {
+    .modal.home-modal .modal-dialog-custom {
+      width: 100% !important; } }
 
 .get-in-touch-section {
   padding: 9rem 0;

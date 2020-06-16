@@ -19,6 +19,20 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+?>
+
+<section class="banner-section">
+	<div class="banner-bg">
+	<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/acc-bg.png" alt="section-img" />
+	</div>
+	<div class="wrapper h-100">
+	<div class="banner-section_inner">
+		<h1>My Account</h1>
+	</div>
+	</div>
+</section>
+
+<?php
 
 do_action( 'woocommerce_before_account_navigation' );
 ?>

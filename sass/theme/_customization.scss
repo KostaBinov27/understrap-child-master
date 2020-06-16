@@ -262,4 +262,28 @@
       padding: 1rem;
     }
   }
+  &.home-modal{
+    .modal-body{
+      padding: 2rem 4rem;
+      .button-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        a{
+          @include for-tablet{
+            margin-bottom: 1rem;
+          }
+        }
+        @include for-tablet{
+          flex-direction: column;
+        }
+      }
+    }
+    .modal-dialog-custom{
+      width: 500px!important;
+      @include for-tablet{
+        width: 100%!important;
+      }
+    }
+  }
 }
