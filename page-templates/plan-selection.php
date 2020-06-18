@@ -66,9 +66,9 @@ get_header(); ?>
             </div>
         </div>
     <!-- </form> -->
-    <div class="bg-wrapper">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/deco-1.png" alt="">
-    </div>
+    <!-- <div class="bg-wrapper">
+        <img src="<?//php echo get_stylesheet_directory_uri(); ?>/img/deco-1.png" alt="">
+    </div> -->
     <div class="bg-wrapper">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/deco-2.png" alt="">
     </div>

@@ -51,7 +51,7 @@ if (isset($_POST['zipLookUp'])){
       </div>
       <div class="content-wrapper">
         <h1>Fresh meets flexible</h1>
-        <h3>Fresh, delicious meals how you want them, when you want them.</h3>
+        <h3>Delicious meals the way you want, when you want.</h3>
         <a data-toggle="modal" data-target="#exampleModal" class="btn btn-white">Get started</a>
       </div>
     </section>
@@ -104,21 +104,42 @@ if (isset($_POST['zipLookUp'])){
           <h2 class="text-white">What's on the menu</h2>
         </div>
         <div class="menu-section_inner">
-          <a class="menu-item" href="#">
-            <div class="menu-img-wrapper">
-              <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-1.png" alt="meal-img" />
-            </div>
-          </a>
-          <a class="menu-item" href="#">
-            <div class="menu-img-wrapper">
-              <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-2.png" alt="meal-img" />
-            </div>
-          </a>
-          <a class="menu-item" href="#">
-            <div class="menu-img-wrapper">
-              <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/meal-3.png" alt="meal-img" />
-            </div>
-          </a>
+          <?php
+              $args = array( 'post_type' => 'product', 'posts_per_page' => 1, 'product_cat' => 'breakfast' );
+              $loop = new WP_Query( $args );
+              while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+                <a class="menu-item" href="<?php echo get_site_url(); ?>/our-meals/">
+                  <div class="menu-img-wrapper">
+                      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" />
+                      <h3> <?php echo the_title(); ?></h3>
+                  </div>
+                </a>
+              <?php endwhile; ?>
+            <?php wp_reset_query(); ?>
+            <?php
+              $args = array( 'post_type' => 'product', 'posts_per_page' => 1, 'product_cat' => 'beef' );
+              $loop = new WP_Query( $args );
+              while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+                <a class="menu-item" href="<?php echo get_site_url(); ?>/our-meals/">
+                  <div class="menu-img-wrapper">
+                      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" />
+                      <h3> <?php echo the_title(); ?></h3>
+                  </div>
+                </a>
+              <?php endwhile; ?>
+            <?php wp_reset_query(); ?>
+            <?php
+              $args = array( 'post_type' => 'product', 'posts_per_page' => 1, 'product_cat' => 'meatless' );
+              $loop = new WP_Query( $args );
+              while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+                <a class="menu-item" href="<?php echo get_site_url(); ?>/our-meals/">
+                  <div class="menu-img-wrapper">
+                      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" />
+                      <h3> <?php echo the_title(); ?></h3>
+                  </div>
+                </a>
+              <?php endwhile; ?>
+            <?php wp_reset_query(); ?>
         </div>
         <a href="<?php echo get_site_url(); ?>/our-meals/" class="btn">Our meals</a>
       </div>
@@ -135,7 +156,7 @@ if (isset($_POST['zipLookUp'])){
               </div>
               <div class="img-wrapper">
                 <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/customizer-2.png" alt="customizer-img" />
-                <a href="<?php echo get_site_url(); ?>/meals-one-time/" class="btn btn-turq btn-img">Customize</a>
+                <a href="<?php echo get_site_url(); ?>/how-it-works/" class="btn btn-turq btn-img">Customize</a>
               </div>
               <div class="img-wrapper">
                 <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/customizer-3.png" alt="customizer-img" />
@@ -162,50 +183,62 @@ if (isset($_POST['zipLookUp'])){
     <section id="zipCodesLookUp" class="delivery-section">
       <div class="wrapper-small">
         <div class="delivery-section_inner">
+        <?php if ($flag != 0 && $flag != 1){ ?>
           <h2 class="text-white">Do we deliver?</h2>
           <p class="text-white">
             We sure do! Delivery is every Sunday. Use our delivery area lookup
             below to see if we are delivering in your area yet.
           </p>
+        <?php } ?>
           <div class="zip-form">
             <?php if ($flag == 1){ ?>
-              <div class="alert alert-success" role="alert">
-                There is delivery for this location!
-              </div>
+              <section class="get-started-section">
+                <div class="wrapper-small">
+                  <div class="get-started-section_inner">
+                    <h2>Lucky you</h2>
+                    <h3>
+                      We already deliver to your area. So, what are you waiting for?
+                    </h3>
+                    <a id="getStartedPopup" data-toggle="modal" data-target="#exampleModal" class="btn btn-pink">Get started</a>
+                  </div>
+                </div>
+                <span class="img-deco-left">
+                  <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/pepper-left.png" alt="decoration-img" />
+                </span>
+                <span class="img-deco-right">
+                  <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/pepper-right.png" alt="decoration-img" />
+                </span>
+              </section>
             <?php
             } else if ($flag == 0) { ?>
-            <div class="alert alert-danger" role="alert">
-              There is no delivery for this location!
-            </div>
+              <section class="get-started-section">
+                <div class="wrapper-small">
+                  <div class="get-started-section_inner">
+                    <!-- <h2>Lucky you</h2> -->
+                    <h3>
+                      Sorry! We don’t offer delivery in your area (yet). But you can still swing by one of our locations and pick up your meals.
+                    </h3>
+                    <a id="getStartedPopup" data-toggle="modal" data-target="#exampleModal" class="btn btn-pink">Get started</a>
+                  </div>
+                </div>
+                <span class="img-deco-left">
+                  <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/pepper-left.png" alt="decoration-img" />
+                </span>
+                <span class="img-deco-right">
+                  <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/pepper-right.png" alt="decoration-img" />
+                </span>
+              </section>
             <?php
-            } ?>
+            } else if ($flag != 0 || $flag != 1){ ?>
             <form action="#zipCodesLookUp" method="post">
               <input type="number" name="zipCodeNum" placeholder="Enter zip code" />
               <button type="submit" name="zipLookUp" class="btn btn-white-t">Look up</button>
             </form>
+            <?php } ?>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="get-started-section">
-      <div class="wrapper-small">
-        <div class="get-started-section_inner">
-          <h2>Lucky you</h2>
-          <h3>
-            We already deliver to your area. So, what are you waiting for?
-          </h3>
-          <a id="getStartedPopup" data-toggle="modal" data-target="#exampleModal" class="btn btn-pink">Get started</a>
-        </div>
-      </div>
-      <span class="img-deco-left">
-        <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/pepper-left.png" alt="decoration-img" />
-      </span>
-      <span class="img-deco-right">
-        <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/pepper-right.png" alt="decoration-img" />
-      </span>
-    </section>
-
     <section class="newsletter-section">
       <div class="bg-wrapper">
         <img  src="<?php echo get_stylesheet_directory_uri(); ?>/img/newsletter-bg.png" alt="section-bg" />

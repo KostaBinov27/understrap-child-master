@@ -351,7 +351,7 @@
 // get started section
 .get-started-section {
   position: relative;
-  padding: 200px 0;
+  // padding: 200px 0;
   text-align: center;
   &_inner {
     h2 {
@@ -514,5 +514,16 @@
   color: #c40048;
   background: #fff;
   border: 2px solid #c40048;
+}
+
+.menu-img-wrapper{
+  h3{
+    width: 300px;
+    color: #fff;
+  }
+}
+
+.get-started-section_inner{
+  color: #fff;
 }
 // KOSTA CSS POPUP MODAL GET STARTED END

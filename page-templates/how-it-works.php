@@ -133,25 +133,21 @@ if (isset($_POST['zipLookUp'])){
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/what.png" alt="icon" />
             <h2>What</h2>
             <h4>
-              Start off by telling us when you want your food and how much to
-              make. Is this a weekly thing, or do you just want a one-off order
-              to try us out?
+            Then let us know which meals you love. If it’s a one-off order, choose what you want exactly. For subscriptions, let us know your favorites and we’ll mix it up for you!
             </h4>
           </div>
           <div class="box-wrapper">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/how.png" alt="icon" />
             <h2>How</h2>
             <h4>
-              Start off by telling us when you want your food and how much to
-              make. Is this a weekly thing, or do you just want a one-off order
-              to try us out?
+            Finally, let us know how you want it. Dietary restrictions? Bulking up and need extra protein? No problem! Customize our meals to your heart’s content.
             </h4>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="zipCodesLookUp" class="time-to-eat-section">
+    <section class="time-to-eat-section">
       <div class="wrapper-small">
         <div class="time-to-eat-section_inner">
           <div class="time-to-eat-section_inner_left">
@@ -162,17 +158,6 @@ if (isset($_POST['zipLookUp'])){
               delivering in your area yet.
             </h4>
             <div class="form-wrapper">
-              <?php if ($flag == 1){ ?>
-                <div class="alert alert-success" role="alert">
-                  There is delivery for this location!
-                </div>
-              <?php
-              } else if ($flag == 0) { ?>
-              <div class="alert alert-danger" role="alert">
-                There is no delivery for this location!
-              </div>
-              <?php
-              } ?>
               <form action="#zipCodesLookUp" method="post">
                 <div class="form-group">
                   <input name="zipCodeNum" type="text" placeholder="ZIP CODE" />
@@ -189,25 +174,33 @@ if (isset($_POST['zipLookUp'])){
         </div>
       </div>
     </section>
-
-    <section class="get-started-section">
-      <div class="wrapper-small">
-        <div class="get-started-section_inner">
-          <h2>Lucky you</h2>
-          <h3>
-            We already deliver to your area. So, what are you waiting for?
-          </h3>
-          <a id="getStartedPopup" data-toggle="modal" data-target="#exampleModal" class="btn btn-pink">Get started</a>
+    <section id="zipCodesLookUp"></section>
+    <?php if ($flag == 0 || $flag == 1){  ?>
+      <section  class="get-started-section">
+        <div class="wrapper-small pt-5 pb-5">
+          <div class="get-started-section_inner">
+            <?php if ($flag == 1) {  ?>
+              <h2 style="color: #111;">Lucky you</h2>
+              <h3 style="color: #111;">
+                We already deliver to your area. So, what are you waiting for?
+              </h3>
+            <?php } if ($flag == 0){ ?>
+              <h2 style="color: #111;">Sorry</h2>
+              <h3 style="color: #111;">
+                We don’t offer delivery in your area (yet). But you can still swing by one of our locations and pick up your meals.
+              </h3>
+            <?php } ?>
+            <a id="getStartedPopup" data-toggle="modal" data-target="#exampleModal" class="btn btn-pink">Get started</a>
+          </div>
         </div>
-      </div>
-      <span class="img-deco-left">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pepper-left.png" alt="decoration-img" />
-      </span>
-      <span class="img-deco-right">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pepper-right.png" alt="decoration-img" />
-      </span>
-    </section>
-
+        <span class="img-deco-left">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pepper-left.png" alt="decoration-img" />
+        </span>
+        <span class="img-deco-right">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pepper-right.png" alt="decoration-img" />
+        </span>
+      </section>
+    <?php } ?>
     <section class="email-section">
       <div class="bg-wrapper">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/newsl-img.png" alt="section-bg" />

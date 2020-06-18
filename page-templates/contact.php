@@ -85,14 +85,14 @@ if (isset($_POST['emailSubmit'])){
                 <div class="map-wrapper">
                     <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=5895%20Katella%20Ave%2C%20CA&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/en/">google maps embed options</a></div><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div>
                 </div>
-                <a href="javascript:void(0)" class="btn btn-pink">Cypress</a>
+                <a href="tel:(714) 699-1348" class="btn btn-pink">Cypress</a>
             </div>
             <div class="locations-section_inner_right">
                 <p><span class="text-bold text-uppercase">FOUNTAIN VALLEY</span> - 9965 Ellis Ave, CA</p>
                 <div class="map-wrapper">
                     <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=9965%20Ellis%20Ave%2C%20CA&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net/en/">google maps embed options</a></div><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div>
                 </div>
-                <a href="javascript:void(0)" class="btn btn-pink">Fountain Valley</a>
+                <a href="tel:(714) 887-3441" class="btn btn-pink">Fountain Valley</a>
             </div>
           </div>
       </div>

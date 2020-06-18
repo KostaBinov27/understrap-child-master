@@ -71,11 +71,11 @@ if (isset($_POST['emailSubmit'])){
               while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
                 <div class="meal-item">
                   <div class="img-wrapper">
-                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" />
+                    <a data-toggle="modal" data-target="#exampleModal" href=""><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" /></a>
                   </div>
                   <div class="content-wrapper">
-                    <a href="<?php echo get_permalink(); ?>"><h3 class="meal-title"> <?php the_title(); ?></h3></a>
-                    <p class="meal-desc"><?php the_excerpt(); ?><span class="meal-price"><?php echo $product->get_regular_price(); ?></span></p>
+                    <a data-toggle="modal" data-target="#exampleModal" href=""><h3 class="meal-title"> <?php the_title(); ?></h3></a>
+                    <p class="meal-desc"><?php the_excerpt(); ?><span class="meal-price"></span></p>
                     <ul class="alergens">
                       <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
                       <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-2.png" alt="alergen-icon" /></li>
@@ -108,17 +108,17 @@ if (isset($_POST['emailSubmit'])){
                 while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
                   <div class="meal-item">
                     <div class="img-wrapper">
-                      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" />
+                      <a data-toggle="modal" data-target="#exampleModal" href=""><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" /></a>
                     </div>
                     <div class="content-wrapper">
-                      <a href="<?php echo get_permalink(); ?>"
+                      <a data-toggle="modal" data-target="#exampleModal" href=""
                         ><h3 class="meal-title">
                           <?php the_title(); ?>
                         </h3></a
                       >
                       <p class="meal-desc">
                       <?php the_excerpt(); ?><span class="meal-price"
-                          ><?php echo $product->get_regular_price(); ?></span
+                          ></span
                         >
                       </p>
                       <ul class="alergens">
@@ -139,17 +139,17 @@ if (isset($_POST['emailSubmit'])){
                 while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
                   <div class="meal-item">
                     <div class="img-wrapper">
-                      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" />
+                      <a data-toggle="modal" data-target="#exampleModal" href=""><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" /></a>
                     </div>
                     <div class="content-wrapper">
-                      <a href="<?php echo get_permalink(); ?>"
+                      <a data-toggle="modal" data-target="#exampleModal" href=""
                         ><h3 class="meal-title">
                           <?php the_title(); ?>
                         </h3></a
                       >
                       <p class="meal-desc">
                       <?php the_excerpt(); ?><span class="meal-price"
-                          ><?php echo $product->get_regular_price(); ?></span
+                          ></span
                         >
                       </p>
                       <ul class="alergens">
@@ -170,17 +170,17 @@ if (isset($_POST['emailSubmit'])){
                 while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
                   <div class="meal-item">
                     <div class="img-wrapper">
-                      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" />
+                      <a data-toggle="modal" data-target="#exampleModal" href=""><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" /></a>
                     </div>
                     <div class="content-wrapper">
-                      <a href="<?php echo get_permalink(); ?>"
+                      <a data-toggle="modal" data-target="#exampleModal" href=""
                         ><h3 class="meal-title">
                           <?php the_title(); ?>
                         </h3></a
                       >
                       <p class="meal-desc">
                       <?php the_excerpt(); ?><span class="meal-price"
-                          ><?php echo $product->get_regular_price(); ?></span
+                          ></span
                         >
                       </p>
                       <ul class="alergens">
@@ -201,17 +201,17 @@ if (isset($_POST['emailSubmit'])){
                 while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
                   <div class="meal-item">
                     <div class="img-wrapper">
-                      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" />
+                      <a data-toggle="modal" data-target="#exampleModal" href=""><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" /></a>
                     </div>
                     <div class="content-wrapper">
-                      <a href="<?php echo get_permalink(); ?>"
+                      <a data-toggle="modal" data-target="#exampleModal" href=""
                         ><h3 class="meal-title">
                           <?php the_title(); ?>
                         </h3></a
                       >
                       <p class="meal-desc">
                       <?php the_excerpt(); ?><span class="meal-price"
-                          ><?php echo $product->get_regular_price(); ?></span
+                          ></span
                         >
                       </p>
                       <ul class="alergens">
@@ -232,17 +232,17 @@ if (isset($_POST['emailSubmit'])){
                 while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
                   <div class="meal-item">
                     <div class="img-wrapper">
-                      <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" />
+                      <a data-toggle="modal" data-target="#exampleModal" href=""><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="meal-img" /></a>
                     </div>
                     <div class="content-wrapper">
-                      <a href="<?php echo get_permalink(); ?>"
+                      <a data-toggle="modal" data-target="#exampleModal" href=""
                         ><h3 class="meal-title">
                           <?php the_title(); ?>
                         </h3></a
                       >
                       <p class="meal-desc">
                       <?php the_excerpt(); ?><span class="meal-price"
-                          ><?php echo $product->get_regular_price(); ?></span
+                          ></span
                         >
                       </p>
                       <ul class="alergens">

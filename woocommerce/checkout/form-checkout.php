@@ -40,7 +40,16 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 	</div>
 </section>
 <div class="woocommerce-form-coupon-toggle">
-	<?php wc_print_notice( apply_filters( 'woocommerce_checkout_coupon_message', __( 'Have a coupon?', 'understrap' ) . ' <a href="#" class="showcoupon">' . __( 'Click here to enter your code', 'understrap' ) . '</a>' ), 'notice' ); ?>
+		<div class="container">
+			<?php
+			woocommerce_login_form(
+				array(
+					'message'  => esc_html__( 'If you have shopped with us before, please enter your details below. If you are a new customer, please proceed to the Billing section.', 'woocommerce' ),
+					'redirect' => wc_get_checkout_url(),
+					'hidden'   => true,
+				)
+			); ?>
+		</div>
 </div>
 <div class="cart-empty-pre mt-5">
 

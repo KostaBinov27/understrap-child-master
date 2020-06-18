@@ -55,8 +55,8 @@ $container = get_theme_mod( 'understrap_container_type' );
             </ul>
           </div>
           <div class="footer-group">
-            <a href="<?php echo get_site_url(); ?>/contact/#mapsSection" class="btn btn-pink">Call cypress</a>
-            <a href="<?php echo get_site_url(); ?>/contact/#mapsSection" class="btn btn-pink">Call fountain valley</a>
+            <a href="tel:(714) 699-1348" class="btn btn-pink">Call cypress</a>
+            <a href="tel:(714) 887-3441" class="btn btn-pink">Call fountain valley</a>
           </div>
           <div class="footer-group">
             <a href="https://www.facebook.com/fitbitesgrill"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/fb.svg" alt="fb-icon" /></a>
@@ -100,8 +100,8 @@ $container = get_theme_mod( 'understrap_container_type' );
             </ul>
           </div>
           <div class="footer-group">
-            <a href="<?php echo get_site_url(); ?>/contact/#mapsSection" class="btn btn-pink">Call cypress</a>
-            <a href="<?php echo get_site_url(); ?>/contact/#mapsSection" class="btn btn-pink">Call fountain valley</a>
+            <a href="tel:(714) 699-1348" class="btn btn-pink">Call cypress</a>
+            <a href="tel:(714) 887-3441" class="btn btn-pink">Call fountain valley</a>
           </div>
           <div class="footer-group d-none">
             <a href="https://www.facebook.com/fitbitesgrill"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/fb.svg" alt="fb-icon" /></a>

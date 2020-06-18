@@ -154,3 +154,9 @@ function add_custom_price( $cart ) {
 		}
     }
 }
+
+add_filter( 'woocommerce_return_to_shop_redirect', 'bbloomer_change_return_shop_url' );
+ 
+function bbloomer_change_return_shop_url() {
+return get_site_url()."/our-meals/";
+}

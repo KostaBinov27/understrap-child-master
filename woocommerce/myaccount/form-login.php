@@ -19,7 +19,18 @@
 defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_customer_login_form' ); ?>
+<section class="banner-section">
+	<div class="banner-bg">
+	<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/acc-bg.png" alt="section-img" />
+	</div>
+	<div class="wrapper h-100">
+	<div class="banner-section_inner">
+		<h1>Log In</h1>
+	</div>
+	</div>
+</section>
 
+<div class="container">
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
 <div class="u-columns col2-set row" id="customer_login">
@@ -116,5 +127,5 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 </div>
 <?php endif; ?>
-
+</div>
 <?php do_action( 'woocommerce_after_customer_login_form' ); ?>

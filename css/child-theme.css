@@ -12636,7 +12636,6 @@ p {
 
 .get-started-section {
   position: relative;
-  padding: 200px 0;
   text-align: center; }
   .get-started-section_inner h2 {
     margin-bottom: 60px; }
@@ -12787,6 +12786,13 @@ p {
   color: #c40048;
   background: #fff;
   border: 2px solid #c40048; }
+
+.menu-img-wrapper h3 {
+  width: 300px;
+  color: #fff; }
+
+.get-started-section_inner {
+  color: #fff; }
 
 footer {
   padding: 80px 0; }
@@ -13086,7 +13092,8 @@ footer {
           height: 100%;
           width: 100%;
           -o-object-fit: contain;
-             object-fit: contain; }
+             object-fit: contain;
+          width: 300px; }
         @media (min-width: 1921px) {
           .meals-section_bottom .meals-grid .meal-item .img-wrapper {
             height: 400px; } }
@@ -13907,9 +13914,6 @@ input.switch:disabled::after {
   margin: auto;
   margin-top: 30px; }
 
-#calc_shipping_state_field span {
-  width: 100% !important; }
-
 .page-id-35 .content-area .post-35 .entry-content .woocommerce {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14649,5 +14653,49 @@ input.switch:disabled::after {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
+
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+  border: 2px solid rgba(127, 127, 127, 0.3);
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 1rem 2rem;
+  width: 100%; }
+
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+  margin: 2em 0 !important; }
+
+.woocommerce-form-login label {
+  width: 100%; }
+
+.woocommerce-form-register label {
+  width: 100%; }
+
+.woocommerce form .password-input, .woocommerce-page form .password-input {
+  width: 100%; }
+
+.form-control:focus, .wpcf7 input:focus[type=text],
+.wpcf7 input:focus[type=search],
+.wpcf7 input:focus[type=url],
+.wpcf7 input:focus[type=tel],
+.wpcf7 input:focus[type=number],
+.wpcf7 input:focus[type=range],
+.wpcf7 input:focus[type=date],
+.wpcf7 input:focus[type=month],
+.wpcf7 input:focus[type=week],
+.wpcf7 input:focus[type=time],
+.wpcf7 input:focus[type=datetime],
+.wpcf7 input:focus[type=datetime-local],
+.wpcf7 input:focus[type=color],
+.wpcf7 input:focus[type=email],
+.wpcf7 input:focus[type=file],
+.wpcf7 input:focus[type=submit],
+.wpcf7 select:focus,
+.wpcf7 textarea:focus, .wpcf7 .wpcf7-validation-errors:focus, .wpcf7 .wpcf7-validation-errors:focus, .wpcf7 input:focus[type=color], .wpcf7 input:focus[type=date], .wpcf7 input:focus[type=datetime-local], .wpcf7 input:focus[type=datetime], .wpcf7 input:focus[type=email], .wpcf7 input:focus[type=file], .wpcf7 input:focus[type=month], .wpcf7 input:focus[type=number], .wpcf7 input:focus[type=range], .wpcf7 input:focus[type=search], .wpcf7 input:focus[type=submit], .wpcf7 input:focus[type=tel], .wpcf7 input:focus[type=text], .wpcf7 input:focus[type=time], .wpcf7 input:focus[type=url], .wpcf7 input:focus[type=week], .wpcf7 select:focus, .wpcf7 textarea:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: gba(193, 193, 193, 0.58);
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem gba(193, 193, 193, 0.58);
+  box-shadow: 0 0 0 0.2rem rgba(193, 193, 193, 0.58); }
 
 /*# sourceMappingURL=child-theme.css.map */

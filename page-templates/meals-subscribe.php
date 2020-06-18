@@ -76,7 +76,7 @@ if (isset($_POST['emailSubmit'])){
                   <div class="content-wrapper">
                     <a href="<?php echo get_permalink(); ?>"><h3 class="meal-title"> <?php the_title(); ?> </h3></a>
                     <p class="meal-desc">
-                      <?php the_excerpt(); ?><span class="meal-price"><?php echo $product->get_regular_price(); ?></span>
+                      <?php the_excerpt(); ?><span class="meal-price"></span>
                     </p>
                     <ul class="alergens">
                       <li><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/al-1.png" alt="alergen-icon" /></li>
@@ -128,7 +128,7 @@ if (isset($_POST['emailSubmit'])){
                       >
                       <p class="meal-desc">
                       <?php the_excerpt(); ?><span class="meal-price"
-                          ><?php echo $product->get_regular_price(); ?></span
+                          ></span
                         >
                       </p>
                       <ul class="alergens">
@@ -167,7 +167,7 @@ if (isset($_POST['emailSubmit'])){
                       >
                       <p class="meal-desc">
                       <?php the_excerpt(); ?><span class="meal-price"
-                          ><?php echo $product->get_regular_price(); ?></span
+                          ></span
                         >
                       </p>
                       <ul class="alergens">
@@ -206,7 +206,7 @@ if (isset($_POST['emailSubmit'])){
                       >
                       <p class="meal-desc">
                       <?php the_excerpt(); ?><span class="meal-price"
-                          ><?php echo $product->get_regular_price(); ?></span
+                          ></span
                         >
                       </p>
                       <ul class="alergens">
@@ -245,7 +245,7 @@ if (isset($_POST['emailSubmit'])){
                       >
                       <p class="meal-desc">
                       <?php the_excerpt(); ?><span class="meal-price"
-                          ><?php echo $product->get_regular_price(); ?></span
+                          ></span
                         >
                       </p>
                       <ul class="alergens">
@@ -284,7 +284,7 @@ if (isset($_POST['emailSubmit'])){
                       >
                       <p class="meal-desc">
                       <?php the_excerpt(); ?><span class="meal-price"
-                          ><?php echo $product->get_regular_price(); ?></span
+                          ></span
                         >
                       </p>
                       <ul class="alergens">
@@ -308,6 +308,7 @@ if (isset($_POST['emailSubmit'])){
             </div>
           </div>
           <div class="btn-wrapper text-center">
+            <button class="btn btn-yellow-spin m-auto btn-yellow" id="spinerBtn" style="display:none;"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></button>
             <a id="continueToCustomizeSubscription" class="btn btn-yellow">GO TO CART</a>
             <div id="errorMessageSubscribe" class="alert alert-danger mt-5" role="alert" style="display: none;">
               Please add products to card!

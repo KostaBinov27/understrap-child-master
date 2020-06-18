@@ -64,7 +64,7 @@ $container = get_theme_mod( 'understrap_container_type' );
               <a class="nav-link" href="<?php echo get_site_url(); ?>/how-it-works/">How it works</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Fitbites grill</a>
+              <a class="nav-link" href="https://fitbitesgrill.com" target="_blank">Fitbites grill</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo get_site_url(); ?>/contact/">Contact us</a>
